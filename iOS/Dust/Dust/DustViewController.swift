@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DustViewController.swift
 //  Dust
 //
 //  Created by Chaewan Park on 2020/03/29.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DustViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
