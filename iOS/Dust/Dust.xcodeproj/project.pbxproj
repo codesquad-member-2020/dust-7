@@ -19,6 +19,7 @@
 		C2725B092432293F000E4A38 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B082432293F000E4A38 /* LocationManagerDelegate.swift */; };
 		C2725B0C24322EFF000E4A38 /* UpdateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B0B24322EFF000E4A38 /* UpdateEvent.swift */; };
 		C2725B0F24323383000E4A38 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B0E24323383000E4A38 /* Endpoints.swift */; };
+		C2725B1124323640000E4A38 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B1024323640000E4A38 /* APIRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C2725B082432293F000E4A38 /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
 		C2725B0B24322EFF000E4A38 /* UpdateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEvent.swift; sourceTree = "<group>"; };
 		C2725B0E24323383000E4A38 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		C2725B1024323640000E4A38 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				C2725B0E24323383000E4A38 /* Endpoints.swift */,
+				C2725B1024323640000E4A38 /* APIRouter.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2725AE42430E090000E4A38 /* DustViewController.swift in Sources */,
+				C2725B1124323640000E4A38 /* APIRouter.swift in Sources */,
 				C2725B022430E269000E4A38 /* ForecastViewController.swift in Sources */,
 				C2725B06243228F0000E4A38 /* DustViewModel.swift in Sources */,
 				C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */,
