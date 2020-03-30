@@ -17,6 +17,7 @@
 		C2725B022430E269000E4A38 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B012430E269000E4A38 /* ForecastViewController.swift */; };
 		C2725B06243228F0000E4A38 /* DustViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B05243228F0000E4A38 /* DustViewModel.swift */; };
 		C2725B092432293F000E4A38 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B082432293F000E4A38 /* LocationManagerDelegate.swift */; };
+		C2725B0C24322EFF000E4A38 /* UpdateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B0B24322EFF000E4A38 /* UpdateEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C2725B012430E269000E4A38 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		C2725B05243228F0000E4A38 /* DustViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustViewModel.swift; sourceTree = "<group>"; };
 		C2725B082432293F000E4A38 /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
+		C2725B0B24322EFF000E4A38 /* UpdateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		C2725ADE2430E090000E4A38 /* Dust */ = {
 			isa = PBXGroup;
 			children = (
+				C2725B0A24322EF0000E4A38 /* Utils */,
 				C2725B032432277B000E4A38 /* ViewModels */,
 				C2725B0724322918000E4A38 /* Delegates */,
 				C2725B0424322787000E4A38 /* Controllers */,
@@ -130,6 +133,14 @@
 				C2725B082432293F000E4A38 /* LocationManagerDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		C2725B0A24322EF0000E4A38 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C2725B0B24322EFF000E4A38 /* UpdateEvent.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +250,7 @@
 				C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */,
 				C2725AE22430E090000E4A38 /* SceneDelegate.swift in Sources */,
 				C2725B092432293F000E4A38 /* LocationManagerDelegate.swift in Sources */,
+				C2725B0C24322EFF000E4A38 /* UpdateEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
