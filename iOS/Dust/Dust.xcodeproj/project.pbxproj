@@ -20,6 +20,8 @@
 		C2725B0C24322EFF000E4A38 /* UpdateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B0B24322EFF000E4A38 /* UpdateEvent.swift */; };
 		C2725B0F24323383000E4A38 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B0E24323383000E4A38 /* Endpoints.swift */; };
 		C2725B1124323640000E4A38 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B1024323640000E4A38 /* APIRouter.swift */; };
+		C2725B1324323987000E4A38 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B1224323987000E4A38 /* Networking.swift */; };
+		C2725B1624323A37000E4A38 /* NearestStationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B1524323A37000E4A38 /* NearestStationResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		C2725B0B24322EFF000E4A38 /* UpdateEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEvent.swift; sourceTree = "<group>"; };
 		C2725B0E24323383000E4A38 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		C2725B1024323640000E4A38 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		C2725B1224323987000E4A38 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		C2725B1524323A37000E4A38 /* NearestStationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				C2725B0A24322EF0000E4A38 /* Utils */,
+				C2725B1424323A09000E4A38 /* Models */,
 				C2725B032432277B000E4A38 /* ViewModels */,
 				C2725B0724322918000E4A38 /* Delegates */,
 				C2725B0424322787000E4A38 /* Controllers */,
@@ -153,8 +158,17 @@
 			children = (
 				C2725B0E24323383000E4A38 /* Endpoints.swift */,
 				C2725B1024323640000E4A38 /* APIRouter.swift */,
+				C2725B1224323987000E4A38 /* Networking.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		C2725B1424323A09000E4A38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2725B1524323A37000E4A38 /* NearestStationResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,11 +273,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2725AE42430E090000E4A38 /* DustViewController.swift in Sources */,
+				C2725B1324323987000E4A38 /* Networking.swift in Sources */,
 				C2725B1124323640000E4A38 /* APIRouter.swift in Sources */,
 				C2725B022430E269000E4A38 /* ForecastViewController.swift in Sources */,
 				C2725B06243228F0000E4A38 /* DustViewModel.swift in Sources */,
 				C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */,
 				C2725AE22430E090000E4A38 /* SceneDelegate.swift in Sources */,
+				C2725B1624323A37000E4A38 /* NearestStationResponse.swift in Sources */,
 				C2725B092432293F000E4A38 /* LocationManagerDelegate.swift in Sources */,
 				C2725B0F24323383000E4A38 /* Endpoints.swift in Sources */,
 				C2725B0C24322EFF000E4A38 /* UpdateEvent.swift in Sources */,

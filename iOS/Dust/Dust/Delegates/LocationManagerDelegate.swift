@@ -31,6 +31,7 @@ extension LocationManagerDelegate: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations)
+        guard let coordinate = locations.first?.coordinate else { return }
+        viewModel.fineNearestStationByCoordinate(x: coordinate.latitude, y: coordinate.longitude)
     }
 }
