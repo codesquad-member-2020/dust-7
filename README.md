@@ -44,7 +44,7 @@
 
 [백로그 스프레드시트 바로가기][back-log]
 
-[back-log]: https://docs.google.com/spreadsheets/d/1af1bbbi45BNF-c-OAyq9FMalbajfl8WQ7YgVgHc4Zew/edit#gid=1386834576
+[back-log]: https://docs.google.com/spreadsheets/d/1af1bbbi45BNF-c-OAyq9FMalbajfl8WQ7YgVgHc4Zew/edit?usp=sharing
 [alex]: https://github.com/haveagood
 [xp]: https://github.com/cocojen
 [lime]: https://github.com/Lime-Lee
