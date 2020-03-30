@@ -15,6 +15,8 @@
 		C2725AEC2430E092000E4A38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2725AEA2430E092000E4A38 /* LaunchScreen.storyboard */; };
 		C2725AF72430E092000E4A38 /* DustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725AF62430E092000E4A38 /* DustTests.swift */; };
 		C2725B022430E269000E4A38 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B012430E269000E4A38 /* ForecastViewController.swift */; };
+		C2725B06243228F0000E4A38 /* DustViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B05243228F0000E4A38 /* DustViewModel.swift */; };
+		C2725B092432293F000E4A38 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B082432293F000E4A38 /* LocationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		C2725AF62430E092000E4A38 /* DustTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustTests.swift; sourceTree = "<group>"; };
 		C2725AF82430E092000E4A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2725B012430E269000E4A38 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		C2725B05243228F0000E4A38 /* DustViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustViewModel.swift; sourceTree = "<group>"; };
+		C2725B082432293F000E4A38 /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +85,11 @@
 		C2725ADE2430E090000E4A38 /* Dust */ = {
 			isa = PBXGroup;
 			children = (
+				C2725B032432277B000E4A38 /* ViewModels */,
+				C2725B0724322918000E4A38 /* Delegates */,
+				C2725B0424322787000E4A38 /* Controllers */,
 				C2725ADF2430E090000E4A38 /* AppDelegate.swift */,
 				C2725AE12430E090000E4A38 /* SceneDelegate.swift */,
-				C2725AE32430E090000E4A38 /* DustViewController.swift */,
-				C2725B012430E269000E4A38 /* ForecastViewController.swift */,
 				C2725AE52430E090000E4A38 /* Main.storyboard */,
 				C2725AE82430E092000E4A38 /* Assets.xcassets */,
 				C2725AEA2430E092000E4A38 /* LaunchScreen.storyboard */,
@@ -100,6 +105,31 @@
 				C2725AF82430E092000E4A38 /* Info.plist */,
 			);
 			path = DustTests;
+			sourceTree = "<group>";
+		};
+		C2725B032432277B000E4A38 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C2725B05243228F0000E4A38 /* DustViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C2725B0424322787000E4A38 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2725AE32430E090000E4A38 /* DustViewController.swift */,
+				C2725B012430E269000E4A38 /* ForecastViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C2725B0724322918000E4A38 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C2725B082432293F000E4A38 /* LocationManagerDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +235,10 @@
 			files = (
 				C2725AE42430E090000E4A38 /* DustViewController.swift in Sources */,
 				C2725B022430E269000E4A38 /* ForecastViewController.swift in Sources */,
+				C2725B06243228F0000E4A38 /* DustViewModel.swift in Sources */,
 				C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */,
 				C2725AE22430E090000E4A38 /* SceneDelegate.swift in Sources */,
+				C2725B092432293F000E4A38 /* LocationManagerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

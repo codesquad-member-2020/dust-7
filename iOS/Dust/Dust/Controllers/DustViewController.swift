@@ -9,10 +9,10 @@
 import UIKit
 
 class DustViewController: UIViewController {
-
+    
+    private let locationManagerDelegate = LocationManagerDelegate(with: DustViewModel())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 }
-
