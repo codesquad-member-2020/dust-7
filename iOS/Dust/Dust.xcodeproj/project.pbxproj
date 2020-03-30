@@ -22,6 +22,7 @@
 		C2725B1124323640000E4A38 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B1024323640000E4A38 /* APIRouter.swift */; };
 		C2725B1324323987000E4A38 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B1224323987000E4A38 /* Networking.swift */; };
 		C2725B1624323A37000E4A38 /* NearestStationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B1524323A37000E4A38 /* NearestStationResponse.swift */; };
+		C2725B1824323D31000E4A38 /* Obervers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B1724323D31000E4A38 /* Obervers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		C2725B1024323640000E4A38 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		C2725B1224323987000E4A38 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		C2725B1524323A37000E4A38 /* NearestStationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationResponse.swift; sourceTree = "<group>"; };
+		C2725B1724323D31000E4A38 /* Obervers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obervers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				C2725B1524323A37000E4A38 /* NearestStationResponse.swift */,
+				C2725B1724323D31000E4A38 /* Obervers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				C2725B1124323640000E4A38 /* APIRouter.swift in Sources */,
 				C2725B022430E269000E4A38 /* ForecastViewController.swift in Sources */,
 				C2725B06243228F0000E4A38 /* DustViewModel.swift in Sources */,
+				C2725B1824323D31000E4A38 /* Obervers.swift in Sources */,
 				C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */,
 				C2725AE22430E090000E4A38 /* SceneDelegate.swift in Sources */,
 				C2725B1624323A37000E4A38 /* NearestStationResponse.swift in Sources */,
