@@ -213,6 +213,9 @@
                         <viewLayoutGuide key="safeArea" id="KwQ-gj-b96"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="미세먼지" image="smoke.fill" catalog="system" id="c4g-jZ-0fl"/>
+                    <connections>
+                        <outlet property="stationLabel" destination="1B8-gL-nEJ" id="KbR-ve-hOX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZe-kp-m4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
