@@ -1,7 +1,5 @@
 package com.codesquad.dust7;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-import jdk.nashorn.internal.objects.annotations.Getter;
 import org.json.JSONException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
