@@ -18,7 +18,7 @@ public class ApiResponseMessage {
         this.message = message;
         this.statusCode = statusCode;
     }
-    public ApiResponseMessage(HttpStatus status, ArrayList<OneHourDust> resultArray, int statusCode) {
+    public ApiResponseMessage(HttpStatus status, Object resultArray, int statusCode) {
         this.status = status;
         this.message = resultArray;
         this.statusCode = statusCode;
