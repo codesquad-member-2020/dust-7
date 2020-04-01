@@ -12,6 +12,6 @@ class Endpoints {
     static let baseURL = "https://21e023d0-0dde-4ff5-993d-87fc91154991.mock.pstmn.io"
     
     static let nearestStationRequestURL = "\(baseURL)/location"
-    static let dustStatusRequestURL = "\(baseURL)/dust-status"
+    static let dustStatusRequestURL = "\(baseURL)"
     static let forecastRequestURL = "\(baseURL)/forecast"
 }
