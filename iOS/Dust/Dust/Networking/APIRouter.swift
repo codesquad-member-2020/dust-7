@@ -10,16 +10,19 @@ import Foundation
 
 enum APIRouter {
     case station(x: Double, y: Double)
+    case dust(station: String)
     
     private var path: String {
         switch self {
         case .station: return Endpoints.nearestStationRequestURL
+        case .dust: return Endpoints.dustStatusRequestURL
         }
     }
     
     private var query: String {
         switch self {
         case let .station(x: x, y: y): return "location=\(x),\(y)"
+        case let .dust(station: station): return "\(station)/dust-status"
         }
     }
     
