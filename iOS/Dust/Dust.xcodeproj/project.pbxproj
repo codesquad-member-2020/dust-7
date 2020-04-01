@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C226A1052434CB210098CEFC /* UserFacingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226A1042434CB210098CEFC /* UserFacingMessage.swift */; };
 		C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725ADF2430E090000E4A38 /* AppDelegate.swift */; };
 		C2725AE22430E090000E4A38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725AE12430E090000E4A38 /* SceneDelegate.swift */; };
 		C2725AE42430E090000E4A38 /* DustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725AE32430E090000E4A38 /* DustViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C226A1042434CB210098CEFC /* UserFacingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFacingMessage.swift; sourceTree = "<group>"; };
 		C2725ADC2430E090000E4A38 /* Dust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2725ADF2430E090000E4A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2725AE12430E090000E4A38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				C2725B1524323A37000E4A38 /* NearestStationResponse.swift */,
 				C2A15E4524345029008D5886 /* DustStatusResponse.swift */,
 				C2725B1724323D31000E4A38 /* Obervers.swift */,
+				C226A1042434CB210098CEFC /* UserFacingMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */,
 				C2725AE22430E090000E4A38 /* SceneDelegate.swift in Sources */,
 				C2725B1624323A37000E4A38 /* NearestStationResponse.swift in Sources */,
+				C226A1052434CB210098CEFC /* UserFacingMessage.swift in Sources */,
 				C2725B092432293F000E4A38 /* LocationManagerDelegate.swift in Sources */,
 				C2725B0F24323383000E4A38 /* Endpoints.swift in Sources */,
 				C2725B0C24322EFF000E4A38 /* UpdateEvent.swift in Sources */,
