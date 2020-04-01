@@ -9,5 +9,21 @@
 import Foundation
 
 struct NearestStationResponse: Decodable {
-    let stationName: String
+    let nearestStation: [Station]
+    
+    enum CodingKeys: String, CodingKey {
+        case nearestStation = "message"
+    }
+    
+    var name: String {
+        return nearestStation.first?.name ?? ""
+    }
+}
+
+struct Station: Decodable {
+    let name: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "stationName"
+    }
 }

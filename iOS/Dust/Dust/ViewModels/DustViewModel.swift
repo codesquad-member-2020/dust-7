@@ -13,7 +13,14 @@ class DustViewModel {
         Networking.requestNearestStation(x: x, y: y) { result in
             switch result {
             case .failure: return
-            case let .success(response): UpdateEvent.station(name: response.stationName).post()
+            case let .success(station): UpdateEvent.station(name: station.name).post()
+            }
+        }
+        
+        Networking.requestDustStatus(station: "강남대로") { result in
+            switch result {
+            case .failure: return
+            case let .success(response): return
             }
         }
     }

@@ -21,8 +21,8 @@ enum APIRouter {
     
     private var query: String {
         switch self {
-        case let .station(x: x, y: y): return "location=\(x),\(y)"
-        case let .dust(station: station): return "\(station)/dust-status"
+        case let .station(x: x, y: y): return "coordinateWGS84=\(y),\(x)"
+        case let .dust(station: station): return "stationName=\(station)"
         }
     }
     
