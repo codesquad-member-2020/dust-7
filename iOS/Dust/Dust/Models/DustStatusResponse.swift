@@ -12,19 +12,19 @@ struct DustStatusResponse: Decodable {
     let observations: [DustObservation]
     
     enum CodingKeys: String, CodingKey {
-        case observations = "items"
+        case observations = "message"
     }
 }
 
 struct DustObservation: Decodable {
     
-    let time: Date
-    let amount: Int
-    let grade: Int
+    let time: String
+    let grade: String
+    let amount: String
     
     enum CodingKeys: String, CodingKey {
         case time = "dataTime"
+        case grade = "pm10Grade"
         case amount = "pm10Value"
-        case grade = "pm10Grade1h"
     }
 }
