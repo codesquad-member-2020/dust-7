@@ -30,24 +30,40 @@ public class DailyDustResult {
         OpenApiGetData openApiGetData = new OpenApiGetData();
         JSONArray dailyAirConditionData = openApiGetData.getAirCondition();
         ArrayList<DailyAirCondition> parseDailyAirCondition = new ArrayList<>();
-        for (int i = 0; i < dailyAirConditionData.length(); i++) {
-            JSONObject oneAirData = dailyAirConditionData.getJSONObject(i);
-            String dataTime = oneAirData.get("dataTime").toString();
-            String imageUrl1 = oneAirData.get("imageUrl1").toString();
-            String imageUrl2 = oneAirData.get("imageUrl2").toString();
-            String imageUrl3 = oneAirData.get("imageUrl3").toString();
-            String informGrade = oneAirData.get("informGrade").toString();
-            String informCause = oneAirData.get("informCause").toString();
-            String informOverall = oneAirData.get("informOverall").toString();
-            DailyAirCondition dailyAirCondition = new DailyAirCondition(dataTime,imageUrl1,imageUrl2,imageUrl3,informGrade,informCause,informOverall);
-            parseDailyAirCondition.add(dailyAirCondition);
-        }
+
+        JSONObject oneAirData = dailyAirConditionData.getJSONObject(1);
+        String dataTime = oneAirData.get("dataTime").toString();
+        String imageUrl1 = oneAirData.get("imageUrl1").toString();
+        String imageUrl2 = oneAirData.get("imageUrl2").toString();
+        String imageUrl3 = oneAirData.get("imageUrl3").toString();
+        String gifFile = oneAirData.get("imageUrl7").toString();
+        String informGrade = oneAirData.get("informGrade").toString();
+        String informCause = oneAirData.get("informCause").toString();
+        String informOverall = oneAirData.get("informOverall").toString();
+        DailyAirCondition dailyAirCondition = new DailyAirCondition(dataTime,imageUrl1,imageUrl2,imageUrl3,gifFile,informGrade,informCause,informOverall);
+        parseDailyAirCondition.add(dailyAirCondition);
+
         return parseDailyAirCondition;
     }
 
+    public ArrayList<StationInformation> stationInformations(String coordinateWGS84) throws IOException, JSONException {
+        OpenApiGetData openApiGetData = new OpenApiGetData();
 
-    public static void main(String[] args) throws JSONException, IOException {
-        DailyDustResult dailyDustResult = new DailyDustResult();
-        dailyDustResult.dailyAirConditionParser();
+        String coordX = coordinateWGS84.split(",")[0];
+        String coordY = coordinateWGS84.split(",")[1];
+
+        JSONObject transferResult = openApiGetData.kakaoTransferAPI(coordX,coordY);
+        JSONArray stations = openApiGetData.getStationInformation(transferResult);
+        ArrayList<StationInformation> parseStationInformation = new ArrayList<>();
+
+        JSONObject nearestStation = stations.getJSONObject(0);
+        String stationName = nearestStation.getString("stationName");
+        String address = nearestStation.getString("addr");
+        String length = nearestStation.getString("tm");
+        StationInformation stationInformation = new StationInformation(stationName,address,length);
+        parseStationInformation.add(stationInformation);
+
+        return parseStationInformation;
     }
+
 }

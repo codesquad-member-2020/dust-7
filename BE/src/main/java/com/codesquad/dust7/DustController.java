@@ -32,4 +32,14 @@ public class DustController {
         }
     }
 
+    @GetMapping("/location")
+    public ResponseEntity<ApiResponseMessage> responseStationInfo(@RequestParam String coordinateWGS84) throws JSONException{
+        DailyDustResult dailyDustResult = new DailyDustResult();
+        try{
+            return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.OK, dailyDustResult.stationInformations(coordinateWGS84),200),HttpStatus.OK);
+        } catch (IOException e) {
+            return new ResponseEntity<>(new ApiResponseMessage(HttpStatus.BAD_REQUEST, "에러가 발생하였습니다!!", 404), HttpStatus.BAD_REQUEST);
+        }
+    }
+
 }
