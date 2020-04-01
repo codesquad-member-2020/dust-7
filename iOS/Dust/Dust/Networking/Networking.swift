@@ -28,4 +28,23 @@ class Networking {
             }
         }.resume()
     }
+    
+    static func requestDustStatus(station: String,
+                                completion: @escaping (Result<DustStatusResponse, Error>) -> Void) {
+        guard let url = APIRouter.dust(station: station).url else { return }
+        
+        URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            guard let data = data else { return }
+            do {
+                let response = try JSONDecoder().decode(DustStatusResponse.self, from: data)
+                completion(.success(response))
+            } catch {
+                completion(.failure(error))
+            }
+        }.resume()
+    }
 }
