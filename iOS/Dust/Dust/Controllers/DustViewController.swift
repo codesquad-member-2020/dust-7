@@ -11,6 +11,7 @@ import UIKit
 class DustViewController: UIViewController {
     
     @IBOutlet weak var stationLabel: UILabel!
+    @IBOutlet weak var dustStatusTableView: UITableView!
     
     private let locationManagerDelegate = LocationManagerDelegate(with: DustViewModel())
     private let observers = Observers()

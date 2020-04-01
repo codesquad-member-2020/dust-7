@@ -161,7 +161,7 @@
                                 <rect key="frame" x="0.0" y="428.5" width="414" height="384.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WyA-Bb-FQ8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DustStatusCell" id="WyA-Bb-FQ8" customClass="DustStatusCell" customModule="Dust" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="20.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WyA-Bb-FQ8" id="ZtR-Oo-Fsl">
@@ -193,6 +193,9 @@
                                                 <constraint firstItem="Aa1-9I-l2g" firstAttribute="top" secondItem="ZtR-Oo-Fsl" secondAttribute="top" id="vMT-l0-e8f"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="concentrationBarView" destination="Aa1-9I-l2g" id="dgO-d2-dAz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -214,6 +217,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="미세먼지" image="smoke.fill" catalog="system" id="c4g-jZ-0fl"/>
                     <connections>
+                        <outlet property="dustStatusTableView" destination="zLo-qO-87X" id="yJv-NX-1cR"/>
                         <outlet property="stationLabel" destination="1B8-gL-nEJ" id="KbR-ve-hOX"/>
                     </connections>
                 </viewController>

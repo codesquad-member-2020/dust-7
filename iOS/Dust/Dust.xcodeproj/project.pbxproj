@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C226A1052434CB210098CEFC /* UserFacingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226A1042434CB210098CEFC /* UserFacingMessage.swift */; };
+		C226A1082434FA2D0098CEFC /* DustStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226A1072434FA2D0098CEFC /* DustStatusCell.swift */; };
+		C226A10A2434FA790098CEFC /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226A1092434FA790098CEFC /* UITableViewExtension.swift */; };
 		C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725ADF2430E090000E4A38 /* AppDelegate.swift */; };
 		C2725AE22430E090000E4A38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725AE12430E090000E4A38 /* SceneDelegate.swift */; };
 		C2725AE42430E090000E4A38 /* DustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725AE32430E090000E4A38 /* DustViewController.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		C226A1042434CB210098CEFC /* UserFacingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFacingMessage.swift; sourceTree = "<group>"; };
+		C226A1072434FA2D0098CEFC /* DustStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustStatusCell.swift; sourceTree = "<group>"; };
+		C226A1092434FA790098CEFC /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C2725ADC2430E090000E4A38 /* Dust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2725ADF2430E090000E4A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2725AE12430E090000E4A38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C226A1062434FA040098CEFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C226A1072434FA2D0098CEFC /* DustStatusCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C2725AD32430E090000E4A38 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +115,7 @@
 			children = (
 				C2725B0A24322EF0000E4A38 /* Utils */,
 				C2725B1424323A09000E4A38 /* Models */,
+				C226A1062434FA040098CEFC /* Views */,
 				C2725B032432277B000E4A38 /* ViewModels */,
 				C2725B0724322918000E4A38 /* Delegates */,
 				C2725B0424322787000E4A38 /* Controllers */,
@@ -155,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				C2725B0B24322EFF000E4A38 /* UpdateEvent.swift */,
+				C226A1092434FA790098CEFC /* UITableViewExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -284,8 +298,10 @@
 				C2725AE42430E090000E4A38 /* DustViewController.swift in Sources */,
 				C2725B1324323987000E4A38 /* Networking.swift in Sources */,
 				C2725B1124323640000E4A38 /* APIRouter.swift in Sources */,
+				C226A10A2434FA790098CEFC /* UITableViewExtension.swift in Sources */,
 				C2A15E4624345029008D5886 /* DustStatusResponse.swift in Sources */,
 				C2725B022430E269000E4A38 /* ForecastViewController.swift in Sources */,
+				C226A1082434FA2D0098CEFC /* DustStatusCell.swift in Sources */,
 				C2725B06243228F0000E4A38 /* DustViewModel.swift in Sources */,
 				C2725B1824323D31000E4A38 /* Obervers.swift in Sources */,
 				C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */,
