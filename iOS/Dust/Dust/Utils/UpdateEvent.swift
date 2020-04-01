@@ -10,10 +10,14 @@ import Foundation
 
 enum UpdateEvent {
     case station(name: String)
+    case dustStatus([DustObservation])
+    case requestFailed
     
     func post() {
         switch self {
         case .station(name: _): UpdateEvent.center.post(name: .stationDidUpdate, object: self)
+        case .dustStatus(_): UpdateEvent.center.post(name: .dustStatusDidUpdate, object: self)
+        case .requestFailed: UpdateEvent.center.post(name: .requestFailed, object: self)
         }
     }
 }
@@ -24,4 +28,6 @@ extension UpdateEvent {
 
 extension Notification.Name {
     static let stationDidUpdate = Notification.Name(rawValue: "stationDidUpdate")
+    static let dustStatusDidUpdate = Notification.Name(rawValue: "dustStatusDidUpdate")
+    static let requestFailed = Notification.Name(rawValue: "requestFailed")
 }
