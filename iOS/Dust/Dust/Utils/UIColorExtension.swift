@@ -15,3 +15,11 @@ extension UIColor {
     static let unhealthyOrange = UIColor(named: "unhealthyOrange")!
     static let hazardousRed = UIColor(named: "hazardousRed")!
 }
+
+extension UIColor {
+    static let colorForGrade: Dictionary<String, UIColor> = ["0": .white,
+                                                             "1": .goodBlue,
+                                                             "2": .moderateGreen,
+                                                             "3": .unhealthyOrange,
+                                                             "4": .hazardousRed]
+}

@@ -27,14 +27,7 @@ extension DustStatusTableViewDataSource: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DustStatusCell.reuseIdentifier, for: indexPath) as? DustStatusCell else { return UITableViewCell() }
         cell.setupLabel(to: viewModel.concentration(of: indexPath.row))
         cell.setupBar(to: CGFloat(viewModel.concentrationPercent(of: indexPath.row)))
-        cell.setupBarColer(to: Self.colorForGrade[viewModel.grade(of: indexPath.row)])
+        cell.setupBarColer(to: UIColor.colorForGrade[viewModel.grade(of: indexPath.row)])
         return cell
     }
-}
-
-extension DustStatusTableViewDataSource {
-    static let colorForGrade: Dictionary<String, UIColor> = ["1": .goodBlue,
-                                                             "2": .moderateGreen,
-                                                             "3": .unhealthyOrange,
-                                                             "4": .hazardousRed]
 }
