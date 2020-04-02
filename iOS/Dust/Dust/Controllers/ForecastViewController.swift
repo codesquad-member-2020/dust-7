@@ -26,16 +26,27 @@ class ForecastViewController: UIViewController {
         observers.removeObservers()
     }
     
-    private func updateView() {
+    private func updateForecastMessages() {
         forecastMessageLabel.text = viewModel.forecast?.message
         gradeForecastLabel.text = viewModel.forecast?.gradeForEachRegion
+    }
+    
+    private func updateForecastGIF() {
+        
     }
     
     private func addViewUpdatingObservers() {
         observers.addObserver(forName: .forecastMessageDidUpdate) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
             if case .forecastMessage = event {
-                self?.updateView()
+                self?.updateForecastMessages()
+            }
+        }
+        
+        observers.addObserver(forName: .forecastGIFDidUpdate) { [weak self] in
+            guard let event = $0 as? UpdateEvent else { return }
+            if case .forecastGIF = event {
+                self?.updateForecastGIF()
             }
         }
     }

@@ -14,16 +14,21 @@ class ForecastViewModel {
         didSet { UpdateEvent.forecastMessage.post() }
     }
     
+    private(set) var forecastGIF = Data() {
+        didSet { UpdateEvent.forecastGIF.post() }
+    }
+    
     func requestForecast() {
         Networking.requestForecast { [weak self] result in
             switch result {
             case .failure: UpdateEvent.requestFailed.post()
             case let .success(response):
-                self?.forecast = response.forecasts.first
-                Networking.requestForecastGIF(response.forecasts.first?.gifImage ?? "") { result in
+                let forecast = response.forecasts.first
+                self?.forecast = forecast
+                Networking.requestForecastGIF(forecast?.gifImage ?? "") { [weak self] result in
                     switch result {
                     case .failure: UpdateEvent.requestFailed.post()
-                    case let .success(response): return
+                    case let .success(response): self?.forecastGIF = response
                     }
                 }
             }
