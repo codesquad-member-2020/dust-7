@@ -74,6 +74,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="예보" image="clock.fill" catalog="system" id="K9P-Kf-map"/>
                     <connections>
+                        <outlet property="foreCastImageView" destination="qDK-aW-2SE" id="Hrx-PR-Rvt"/>
                         <outlet property="forecastMessageLabel" destination="Suj-SG-Gzi" id="2Ms-hN-yVe"/>
                         <outlet property="gradeForecastLabel" destination="ePs-ed-Jyj" id="JGx-EW-kve"/>
                     </connections>

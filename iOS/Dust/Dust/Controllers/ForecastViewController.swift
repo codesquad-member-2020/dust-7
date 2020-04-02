@@ -12,6 +12,7 @@ class ForecastViewController: UIViewController {
     
     @IBOutlet weak var forecastMessageLabel: UILabel!
     @IBOutlet weak var gradeForecastLabel: UILabel!
+    @IBOutlet weak var foreCastImageView: UIImageView!
     
     private let observers = Observers()
     private let viewModel = ForecastViewModel()
