@@ -18,7 +18,9 @@ class DustStatusTableViewDelegate: NSObject {
 }
 
 extension DustStatusTableViewDelegate: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        viewModel.changeRowToDisplay(to: indexPath.row)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let tableView = scrollView as? UITableView,
+            let firstIndexPath = tableView.indexPathsForVisibleRows?.first else { return }
+        viewModel.changeRowToDisplay(to: firstIndexPath.row)
     }
 }
