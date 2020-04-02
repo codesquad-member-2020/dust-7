@@ -30,7 +30,7 @@ class Networking {
     }
     
     static func requestDustStatus(station: String,
-                                completion: @escaping (Result<DustStatusResponse, Error>) -> Void) {
+                                  completion: @escaping (Result<DustStatusResponse, Error>) -> Void) {
         guard let url = APIRouter.dust(station: station).url else { return }
         
         URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in

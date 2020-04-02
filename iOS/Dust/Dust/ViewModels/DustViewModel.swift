@@ -9,18 +9,18 @@
 import Foundation
 
 class DustViewModel {
-    func fineNearestStationByCoordinate(x: Double, y: Double) {
+    func requestDustStatusOfCurrentLocation(x: Double, y: Double) {
         Networking.requestNearestStation(x: x, y: y) { result in
             switch result {
-            case .failure: return
-            case let .success(station): UpdateEvent.station(name: station.name).post()
-            }
-        }
-        
-        Networking.requestDustStatus(station: "강남대로") { result in
-            switch result {
-            case .failure: return
-            case let .success(response): return
+            case .failure: UpdateEvent.requestFailed.post()
+            case let .success(station):
+                UpdateEvent.station(name: station.name).post()
+                Networking.requestDustStatus(station: station.name) { result in
+                    switch result {
+                    case .failure: UpdateEvent.requestFailed.post()
+                    case let .success(response): UpdateEvent.dustStatus(response.observations).post()
+                    }
+                }
             }
         }
     }
