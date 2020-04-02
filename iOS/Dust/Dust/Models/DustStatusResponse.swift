@@ -18,7 +18,7 @@ struct DustStatusResponse: Decodable {
 
 struct DustObservation: Decodable {
     
-    let time: String
+    let time: Date
     let grade: String
     let concentration: String
     let message: String

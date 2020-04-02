@@ -40,7 +40,9 @@ class Networking {
             }
             guard let data = data else { return }
             do {
-                let response = try JSONDecoder().decode(DustStatusResponse.self, from: data)
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .formatted(.observationTimeDecodingFormatter)
+                let response = try decoder.decode(DustStatusResponse.self, from: data)
                 completion(.success(response))
             } catch {
                 completion(.failure(error))
