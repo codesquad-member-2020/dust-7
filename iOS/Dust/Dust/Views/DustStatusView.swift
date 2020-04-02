@@ -24,5 +24,15 @@ class DustStatusView: UIView {
     func updateView() {
         guard let row = viewModel?.rowToDisplay else { return }
         statusLabel.text = viewModel?.gradeMessage(of: row)
+        concentrationLabel.text = (viewModel?.concentration(of: row) ?? "0") + " µg/㎥"
+        statusImageView.image = Self.imageForGrade[viewModel?.grade(of: row) ?? "0"]
     }
+}
+
+extension DustStatusView {
+    static let imageForGrade: Dictionary<String, UIImage> = ["0": .placeholder,
+                                                             "1": .good,
+                                                             "2": .moderate,
+                                                             "3": .unhealthy,
+                                                             "4": .hazardous]
 }
