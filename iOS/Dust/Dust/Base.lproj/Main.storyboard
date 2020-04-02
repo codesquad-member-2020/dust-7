@@ -22,11 +22,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forecast" translatesAutoresizingMaskIntoConstraints="NO" id="qDK-aW-2SE">
-                                <rect key="frame" x="0.0" y="132" width="414" height="874"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDK-aW-2SE">
+                                <rect key="frame" x="0.0" y="132" width="414" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="500" id="Lfi-fA-qLq"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="○" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-SG-Gzi">
-                                <rect key="frame" x="20" y="1014" width="374" height="14.5"/>
+                                <rect key="frame" x="20" y="640" width="374" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,7 +50,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePs-ed-Jyj">
-                                <rect key="frame" x="20" y="1048.5" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="674.5" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" name="detailTextGray"/>
                                 <nil key="highlightedColor"/>
@@ -251,7 +254,6 @@
     </scenes>
     <resources>
         <image name="clock.fill" catalog="system" width="64" height="60"/>
-        <image name="forecast" width="375" height="437"/>
         <image name="placeholder" width="50" height="50"/>
         <image name="play.fill" catalog="system" width="58" height="64"/>
         <image name="smoke.fill" catalog="system" width="64" height="44"/>
