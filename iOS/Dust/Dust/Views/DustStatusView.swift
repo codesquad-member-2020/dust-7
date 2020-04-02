@@ -26,6 +26,7 @@ class DustStatusView: UIView {
         statusLabel.text = viewModel?.gradeMessage(of: row)
         concentrationLabel.text = (viewModel?.concentration(of: row) ?? "0") + " µg/㎥"
         statusImageView.image = Self.imageForGrade[viewModel?.grade(of: row) ?? "0"]
+        observationTimeLabel.text = viewModel?.observationTime(of: row)
     }
 }
 

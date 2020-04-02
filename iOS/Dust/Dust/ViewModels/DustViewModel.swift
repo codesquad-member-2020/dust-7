@@ -64,4 +64,10 @@ class DustViewModel {
     func gradeMessage(of row: Int) -> String {
         return observations[row].message
     }
+    
+    func observationTime(of row: Int) -> String {
+        let date = DateFormatter.observationTimeFormatter
+            .localizedString(for: observations[row].time, relativeTo: Date())
+        return date
+    }
 }
