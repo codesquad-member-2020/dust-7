@@ -10,11 +10,15 @@ import Foundation
 
 class ForecastViewModel {
     
+    private(set) var forecast: Forecast? = nil {
+        didSet { UpdateEvent.forecastMessage.post() }
+    }
+    
     func requestForecast() {
-        Networking.requestForecast { result in
+        Networking.requestForecast { [weak self] result in
             switch result {
             case .failure: UpdateEvent.requestFailed.post()
-            case let .success(response): return
+            case let .success(response): self?.forecast = response.forecasts.first
             }
         }
     }
