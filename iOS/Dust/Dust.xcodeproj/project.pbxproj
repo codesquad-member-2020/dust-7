@@ -32,6 +32,7 @@
 		C2A15E4624345029008D5886 /* DustStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A15E4524345029008D5886 /* DustStatusResponse.swift */; };
 		C2A4C11F2435E696005B41FE /* DustStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C11E2435E696005B41FE /* DustStatusView.swift */; };
 		C2A4C12124360819005B41FE /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12024360819005B41FE /* UIImageExtension.swift */; };
+		C2A4C12524361B9D005B41FE /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		C2A15E4524345029008D5886 /* DustStatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustStatusResponse.swift; sourceTree = "<group>"; };
 		C2A4C11E2435E696005B41FE /* DustStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustStatusView.swift; sourceTree = "<group>"; };
 		C2A4C12024360819005B41FE /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				C226A1092434FA790098CEFC /* UITableViewExtension.swift */,
 				C226A10E2435C4F20098CEFC /* UIColorExtension.swift */,
 				C2A4C12024360819005B41FE /* UIImageExtension.swift */,
+				C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			files = (
 				C2725AE42430E090000E4A38 /* DustViewController.swift in Sources */,
 				C2725B1324323987000E4A38 /* Networking.swift in Sources */,
+				C2A4C12524361B9D005B41FE /* DateFormatterExtension.swift in Sources */,
 				C2A4C12124360819005B41FE /* UIImageExtension.swift in Sources */,
 				C2725B1124323640000E4A38 /* APIRouter.swift in Sources */,
 				C2A4C11F2435E696005B41FE /* DustStatusView.swift in Sources */,
