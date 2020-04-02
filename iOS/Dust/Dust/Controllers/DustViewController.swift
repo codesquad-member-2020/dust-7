@@ -15,8 +15,7 @@ class DustViewController: UIViewController {
     
     private let locationManagerDelegate = LocationManagerDelegate(with: DustViewModel())
     private let observers = Observers()
-    
-    private var observations = [DustObservation]()
+    private let dustStatusTableViewDataSource = DustStatusTableViewDataSource()
     
     private let alertController: UIAlertController = {
         let alert = UIAlertController(title: UserFacingMessage.networkErrorAlertTitle,
@@ -32,7 +31,8 @@ class DustViewController: UIViewController {
         
         addViewUpdatingObservers()
         
-        dustStatusTableView.dataSource = self
+        dustStatusTableView.dataSource = dustStatusTableViewDataSource
+        dustStatusTableView.rowHeight = 25
     }
     
     deinit {
@@ -50,7 +50,7 @@ class DustViewController: UIViewController {
         observers.addObserver(forName: .dustStatusDidUpdate) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
             if case let .dustStatus(observations) = event {
-                self?.observations = observations
+                self?.dustStatusTableViewDataSource.setObservations(to: observations)
                 self?.dustStatusTableView.reloadData()
             }
         }
@@ -59,17 +59,5 @@ class DustViewController: UIViewController {
             guard let alert = self?.alertController else { return }
             self?.present(alert, animated: true)
         }
-    }
-}
-
-extension DustViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        observations.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: DustStatusCell.reuseIdentifier, for: indexPath) as? DustStatusCell, let concentration = Int(observations[indexPath.row].concentration) else { return UITableViewCell() }
-        cell.setupBar(to: CGFloat(concentration))
-        return cell
     }
 }
