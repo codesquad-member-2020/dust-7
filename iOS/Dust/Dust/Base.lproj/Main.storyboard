@@ -23,10 +23,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forecast" translatesAutoresizingMaskIntoConstraints="NO" id="qDK-aW-2SE">
-                                <rect key="frame" x="0.0" y="132" width="414" height="437"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="874"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="○ [미세먼지] 수도권·충청권·광주·전북은 ‘나쁨’, 그 밖의 권역은 ‘보통’으로 예상됨. 다만, 강원영서·대구는 오전에 ‘나쁨’ 수준일 것으로 예상됨." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-SG-Gzi">
-                                <rect key="frame" x="20" y="577" width="374" height="29"/>
+                                <rect key="frame" x="20" y="1014" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePs-ed-Jyj">
-                                <rect key="frame" x="20" y="626" width="374" height="36"/>
+                                <rect key="frame" x="20" y="1063" width="374" height="36"/>
                                 <string key="text">서울 : 보통,제주 : 좋음,전남 : 좋음,전북 : 보통,광주 : 좋음,경남 : 좋음,경북 : 보통,울산 : 좋음,대구 : 보통,부산 : 좋음,충남 : 보통,충북 : 보통,세종 : 보통,대전 : 보통,영동 : 좋음,영서 : 보통,경기남부 : 보통,경기북부 : 보통,인천 : 보통</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" name="detailTextGray"/>
@@ -87,29 +87,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WC-ck-EeN">
-                                <rect key="frame" x="0.0" y="44" width="414" height="384.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WC-ck-EeN" customClass="DustStatusView" customModule="Dust" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="406.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미세먼지 앱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPC-rB-U7I">
-                                        <rect key="frame" x="116.5" y="20" width="181.5" height="48"/>
+                                        <rect key="frame" x="116.5" y="55" width="181.5" height="48"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="njM-VM-h6F">
-                                        <rect key="frame" x="157" y="68" width="100" height="165"/>
+                                        <rect key="frame" x="157" y="103" width="100" height="152"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="QyT-e2-RDa"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보통" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83I-cu-u8n">
-                                        <rect key="frame" x="181" y="233" width="52" height="36"/>
+                                        <rect key="frame" x="181" y="255" width="52" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nMe-Be-FMP">
-                                        <rect key="frame" x="0.0" y="289" width="414" height="36"/>
+                                        <rect key="frame" x="0.0" y="311" width="414" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 µg/㎥" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUP-qt-Bup">
                                                 <rect key="frame" x="0.0" y="0.0" width="192" height="36"/>
@@ -126,7 +126,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wtt-71-u06">
-                                        <rect key="frame" x="148" y="345" width="118.5" height="19.5"/>
+                                        <rect key="frame" x="148" y="367" width="118.5" height="19.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1B8-gL-nEJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="37" height="19.5"/>
@@ -154,30 +154,34 @@
                                     <constraint firstItem="nMe-Be-FMP" firstAttribute="top" secondItem="83I-cu-u8n" secondAttribute="bottom" constant="20" id="YCM-bR-1GF"/>
                                     <constraint firstItem="njM-VM-h6F" firstAttribute="top" secondItem="cPC-rB-U7I" secondAttribute="bottom" id="ZOn-DK-okD"/>
                                     <constraint firstItem="Wtt-71-u06" firstAttribute="centerX" secondItem="3WC-ck-EeN" secondAttribute="centerX" id="gOs-Wa-fnl"/>
-                                    <constraint firstItem="cPC-rB-U7I" firstAttribute="top" secondItem="3WC-ck-EeN" secondAttribute="top" constant="20" id="mYL-LW-aDN"/>
+                                    <constraint firstItem="cPC-rB-U7I" firstAttribute="top" secondItem="3WC-ck-EeN" secondAttribute="top" constant="55" id="mYL-LW-aDN"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="concentrationLabel" destination="kUP-qt-Bup" id="XAq-gD-vRf"/>
+                                    <outlet property="observationTimeLabel" destination="HBF-5U-Ms8" id="rFk-uf-tr7"/>
+                                    <outlet property="stationLabel" destination="1B8-gL-nEJ" id="pvk-5s-DKn"/>
+                                    <outlet property="statusImageView" destination="njM-VM-h6F" id="FYk-CX-c71"/>
+                                    <outlet property="statusLabel" destination="83I-cu-u8n" id="wn7-qs-K4j"/>
+                                </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zLo-qO-87X">
-                                <rect key="frame" x="0.0" y="428.5" width="414" height="384.5"/>
+                                <rect key="frame" x="0.0" y="406.5" width="414" height="406.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WyA-Bb-FQ8">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="20.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DustStatusCell" id="WyA-Bb-FQ8" customClass="DustStatusCell" customModule="Dust" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="21"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WyA-Bb-FQ8" id="ZtR-Oo-Fsl">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                        <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WyA-Bb-FQ8" id="ZtR-Oo-Fsl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aa1-9I-l2g">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="20.5"/>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aa1-9I-l2g">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" name="goodBlue"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="P1D-FX-cVR"/>
-                                                        <constraint firstAttribute="height" constant="20" id="c4n-re-BH8"/>
-                                                    </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQj-Wc-qCS">
-                                                    <rect key="frame" x="100" y="0.0" width="306" height="20.5"/>
+                                                    <rect key="frame" x="395.5" y="0.0" width="10.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -185,21 +189,21 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="YQj-Wc-qCS" firstAttribute="top" secondItem="ZtR-Oo-Fsl" secondAttribute="top" id="8BK-Ml-G4D"/>
-                                                <constraint firstAttribute="bottom" secondItem="Aa1-9I-l2g" secondAttribute="bottom" id="GL4-Mz-ojo"/>
-                                                <constraint firstItem="YQj-Wc-qCS" firstAttribute="leading" secondItem="Aa1-9I-l2g" secondAttribute="trailing" id="Mhn-HC-HqM"/>
-                                                <constraint firstItem="Aa1-9I-l2g" firstAttribute="leading" secondItem="ZtR-Oo-Fsl" secondAttribute="leading" id="NAQ-tz-xiW"/>
                                                 <constraint firstAttribute="bottom" secondItem="YQj-Wc-qCS" secondAttribute="bottom" id="ll3-PK-7zE"/>
                                                 <constraint firstAttribute="trailing" secondItem="YQj-Wc-qCS" secondAttribute="trailing" constant="8" id="r0P-p3-2r3"/>
-                                                <constraint firstItem="Aa1-9I-l2g" firstAttribute="top" secondItem="ZtR-Oo-Fsl" secondAttribute="top" id="vMT-l0-e8f"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="concentrationBarView" destination="Aa1-9I-l2g" id="dgO-d2-dAz"/>
+                                            <outlet property="concentrationLabel" destination="YQj-Wc-qCS" id="hBa-n2-rCh"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="3WC-ck-EeN" firstAttribute="top" secondItem="KwQ-gj-b96" secondAttribute="top" id="20w-5q-94h"/>
+                            <constraint firstItem="3WC-ck-EeN" firstAttribute="top" secondItem="B98-SI-Syj" secondAttribute="top" id="20w-5q-94h"/>
                             <constraint firstItem="3WC-ck-EeN" firstAttribute="leading" secondItem="KwQ-gj-b96" secondAttribute="leading" id="2Hy-Lg-dON"/>
                             <constraint firstItem="zLo-qO-87X" firstAttribute="height" secondItem="3WC-ck-EeN" secondAttribute="height" id="4kz-qG-VBk"/>
                             <constraint firstItem="KwQ-gj-b96" firstAttribute="trailing" secondItem="3WC-ck-EeN" secondAttribute="trailing" id="6FA-hn-rki"/>
@@ -214,7 +218,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="미세먼지" image="smoke.fill" catalog="system" id="c4g-jZ-0fl"/>
                     <connections>
-                        <outlet property="stationLabel" destination="1B8-gL-nEJ" id="KbR-ve-hOX"/>
+                        <outlet property="dustStatusTableView" destination="zLo-qO-87X" id="yJv-NX-1cR"/>
+                        <outlet property="dustStatusView" destination="3WC-ck-EeN" id="ruu-dN-RXb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZe-kp-m4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
