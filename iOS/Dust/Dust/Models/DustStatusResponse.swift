@@ -21,10 +21,12 @@ struct DustObservation: Decodable {
     let time: String
     let grade: String
     let concentration: String
+    let message: String
     
     enum CodingKeys: String, CodingKey {
         case time = "dataTime"
         case grade = "pm10Grade"
         case concentration = "pm10Value"
+        case message = "pmMessage"
     }
 }

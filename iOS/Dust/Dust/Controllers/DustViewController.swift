@@ -35,8 +35,10 @@ class DustViewController: UIViewController {
         addViewUpdatingObservers()
         setupViewModels()
         
+        dustStatusTableView.delegate = dustStatusTableViewDelegate
         dustStatusTableView.dataSource = dustStatusTableViewDataSource
         dustStatusTableView.rowHeight = 25
+        dustStatusTableView.allowsSelection = false
     }
     
     deinit {
@@ -61,6 +63,7 @@ class DustViewController: UIViewController {
         observers.addObserver(forName: .dustStatusDidUpdate) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
             if case .dustStatus = event {
+                self?.dustStatusView.updateView()
                 self?.dustStatusTableView.reloadData()
             }
         }
@@ -70,8 +73,11 @@ class DustViewController: UIViewController {
             self?.present(alert, animated: true)
         }
         
-        observers.addObserver(forName: .displayedRowDidChanged) { [weak self] _ in
-            
+        observers.addObserver(forName: .displayedRowDidChanged) { [weak self] in
+            guard let event = $0 as? UpdateEvent else { return }
+            if case .displayedRow = event {
+                self?.dustStatusView.updateView()
+            }
         }
     }
 }

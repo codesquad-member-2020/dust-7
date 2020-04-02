@@ -20,4 +20,9 @@ class DustStatusView: UIView {
     func updateStationLabel() {
         stationLabel.text = viewModel?.stationName
     }
+    
+    func updateView() {
+        guard let row = viewModel?.rowToDisplay else { return }
+        statusLabel.text = viewModel?.gradeMessage(of: row)
+    }
 }

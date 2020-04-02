@@ -18,7 +18,7 @@ class DustViewModel {
         didSet { UpdateEvent.dustStatus.post() }
     }
     
-    private var rowToDisplay = 0 {
+    private(set) var rowToDisplay = 0 {
         didSet { UpdateEvent.displayedRow.post() }
     }
     
@@ -59,5 +59,9 @@ class DustViewModel {
     
     func grade(of row: Int) -> String {
         return observations[row].grade
+    }
+    
+    func gradeMessage(of row: Int) -> String {
+        return observations[row].message
     }
 }
