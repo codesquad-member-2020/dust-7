@@ -10,6 +10,9 @@ import UIKit
 
 class ForecastViewController: UIViewController {
     
+    @IBOutlet weak var forecastMessageLabel: UILabel!
+    @IBOutlet weak var gradeForecastLabel: UILabel!
+    
     private let forecastViewModel = ForecastViewModel()
     
     override func viewDidLoad() {
