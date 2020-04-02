@@ -67,4 +67,17 @@ class Networking {
             }
         }.resume()
     }
+    
+    static func requestForecastGIF(_ url: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        guard let url = URL(string: url) else { return }
+        
+        URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            guard let data = data else { return }
+            completion(.success(data))
+        }.resume()
+    }
 }
