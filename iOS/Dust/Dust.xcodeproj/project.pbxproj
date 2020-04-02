@@ -31,6 +31,7 @@
 		C2725B1824323D31000E4A38 /* Obervers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725B1724323D31000E4A38 /* Obervers.swift */; };
 		C2A15E4624345029008D5886 /* DustStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A15E4524345029008D5886 /* DustStatusResponse.swift */; };
 		C2A4C11F2435E696005B41FE /* DustStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C11E2435E696005B41FE /* DustStatusView.swift */; };
+		C2A4C12124360819005B41FE /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12024360819005B41FE /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		C2725B1724323D31000E4A38 /* Obervers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obervers.swift; sourceTree = "<group>"; };
 		C2A15E4524345029008D5886 /* DustStatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustStatusResponse.swift; sourceTree = "<group>"; };
 		C2A4C11E2435E696005B41FE /* DustStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustStatusView.swift; sourceTree = "<group>"; };
+		C2A4C12024360819005B41FE /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				C2725B0B24322EFF000E4A38 /* UpdateEvent.swift */,
 				C226A1092434FA790098CEFC /* UITableViewExtension.swift */,
 				C226A10E2435C4F20098CEFC /* UIColorExtension.swift */,
+				C2A4C12024360819005B41FE /* UIImageExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				C2725AE42430E090000E4A38 /* DustViewController.swift in Sources */,
 				C2725B1324323987000E4A38 /* Networking.swift in Sources */,
+				C2A4C12124360819005B41FE /* UIImageExtension.swift in Sources */,
 				C2725B1124323640000E4A38 /* APIRouter.swift in Sources */,
 				C2A4C11F2435E696005B41FE /* DustStatusView.swift in Sources */,
 				C226A10A2434FA790098CEFC /* UITableViewExtension.swift in Sources */,
