@@ -11,6 +11,7 @@
 		C226A1082434FA2D0098CEFC /* DustStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226A1072434FA2D0098CEFC /* DustStatusCell.swift */; };
 		C226A10A2434FA790098CEFC /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226A1092434FA790098CEFC /* UITableViewExtension.swift */; };
 		C226A10D2435BF3C0098CEFC /* DustStatusTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226A10C2435BF3C0098CEFC /* DustStatusTableViewDataSource.swift */; };
+		C226A10F2435C4F20098CEFC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226A10E2435C4F20098CEFC /* UIColorExtension.swift */; };
 		C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725ADF2430E090000E4A38 /* AppDelegate.swift */; };
 		C2725AE22430E090000E4A38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725AE12430E090000E4A38 /* SceneDelegate.swift */; };
 		C2725AE42430E090000E4A38 /* DustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725AE32430E090000E4A38 /* DustViewController.swift */; };
@@ -45,6 +46,7 @@
 		C226A1072434FA2D0098CEFC /* DustStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustStatusCell.swift; sourceTree = "<group>"; };
 		C226A1092434FA790098CEFC /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		C226A10C2435BF3C0098CEFC /* DustStatusTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustStatusTableViewDataSource.swift; sourceTree = "<group>"; };
+		C226A10E2435C4F20098CEFC /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C2725ADC2430E090000E4A38 /* Dust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2725ADF2430E090000E4A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2725AE12430E090000E4A38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				C2725B0B24322EFF000E4A38 /* UpdateEvent.swift */,
 				C226A1092434FA790098CEFC /* UITableViewExtension.swift */,
+				C226A10E2435C4F20098CEFC /* UIColorExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				C2725B1124323640000E4A38 /* APIRouter.swift in Sources */,
 				C226A10A2434FA790098CEFC /* UITableViewExtension.swift in Sources */,
 				C2A15E4624345029008D5886 /* DustStatusResponse.swift in Sources */,
+				C226A10F2435C4F20098CEFC /* UIColorExtension.swift in Sources */,
 				C2725B022430E269000E4A38 /* ForecastViewController.swift in Sources */,
 				C226A1082434FA2D0098CEFC /* DustStatusCell.swift in Sources */,
 				C2725B06243228F0000E4A38 /* DustViewModel.swift in Sources */,
