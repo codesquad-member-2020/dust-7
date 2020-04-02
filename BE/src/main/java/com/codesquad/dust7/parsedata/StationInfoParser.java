@@ -1,23 +1,19 @@
 package com.codesquad.dust7.parsedata;
 
 import com.codesquad.dust7.domain.StationInfoData;
-import com.codesquad.dust7.openapi.OpenApiGetData;
+import com.codesquad.dust7.openapi.OpenApiRequestData;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class StationInfoParser {
-    public ArrayList<StationInfoData> stationInformation(String coordinateWGS84) throws IOException, JSONException {
-        OpenApiGetData openApiGetData = new OpenApiGetData();
-
+    public ArrayList<StationInfoData> stationInformation(String coordinateWGS84) throws JSONException {
         String coordX = coordinateWGS84.split(",")[0];
         String coordY = coordinateWGS84.split(",")[1];
 
-        JSONObject transferResult = openApiGetData.kakaoTransferAPI(coordX,coordY);
-        JSONArray stations = openApiGetData.getStationInformation(transferResult);
+        JSONObject transferResult = OpenApiRequestData.getWGS84Coordinate(coordX,coordY);
+        JSONArray stations = OpenApiRequestData.getStationInformation(transferResult);
         ArrayList<StationInfoData> parseStationInformation = new ArrayList<>();
 
         JSONObject nearestStation = stations.getJSONObject(0);

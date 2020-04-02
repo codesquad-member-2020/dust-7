@@ -1,18 +1,16 @@
 package com.codesquad.dust7.parsedata;
 
 import com.codesquad.dust7.domain.ForecastData;
-import com.codesquad.dust7.openapi.OpenApiGetData;
+import com.codesquad.dust7.openapi.OpenApiRequestData;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class ForcastParser {
-    public ArrayList<ForecastData> forcastDataParser() throws IOException, JSONException {
-        OpenApiGetData openApiGetData = new OpenApiGetData();
-        JSONArray dailyAirConditionData = openApiGetData.getAirCondition();
+    public ArrayList<ForecastData> forcastDataParser() throws JSONException {
+        JSONArray dailyAirConditionData = OpenApiRequestData.getforecastData();
         ArrayList<ForecastData> parseDailyAirCondition = new ArrayList<>();
         JSONObject oneAirData = dailyAirConditionData.getJSONObject(1);
         String dataTime = oneAirData.getString("dataTime");

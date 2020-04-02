@@ -1,21 +1,18 @@
 package com.codesquad.dust7.parsedata;
 
 import com.codesquad.dust7.domain.DustData;
-import com.codesquad.dust7.domain.StationInfoData;
-import com.codesquad.dust7.openapi.OpenApiGetData;
+import com.codesquad.dust7.openapi.OpenApiRequestData;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DustDataParser {
 
-    public List<DustData> DustDataParser(String stationName) throws IOException, JSONException {
-        OpenApiGetData openApiGetData = new OpenApiGetData();
-        JSONArray dailyDustData = openApiGetData.getStationDailyDustInfo(stationName);
+    public List<DustData> DustDataParser(String stationName) throws JSONException {
+        JSONArray dailyDustData = OpenApiRequestData.getdustData(stationName);
         List<DustData> parseDailyDustData = new ArrayList<>();
 
         for (int i = 0; i < dailyDustData.length(); i++) {
