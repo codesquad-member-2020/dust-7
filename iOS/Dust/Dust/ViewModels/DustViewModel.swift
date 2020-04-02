@@ -18,6 +18,8 @@ class DustViewModel {
         didSet { UpdateEvent.dustStatus.post() }
     }
     
+    private var maxConcentration = 150.0
+    
     var observationCount: Int {
         return observations.count
     }
@@ -38,7 +40,12 @@ class DustViewModel {
         }
     }
     
-    func concentration(of number: Int) -> Int {
-        return Int(observations[number].concentration) ?? 0
+    func concentration(of row: Int) -> String {
+        return observations[row].concentration
+    }
+    
+    func concentrationPercent(of row: Int) -> Double {
+        guard let concentration = Int(observations[row].concentration) else { return 0 }
+        return Double(concentration) / maxConcentration
     }
 }

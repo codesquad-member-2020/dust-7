@@ -25,7 +25,8 @@ extension DustStatusTableViewDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DustStatusCell.reuseIdentifier, for: indexPath) as? DustStatusCell else { return UITableViewCell() }
-        cell.setupBar(to: CGFloat(viewModel.concentration(of: indexPath.row)))
+        cell.setupLabel(to: viewModel.concentration(of: indexPath.row))
+        cell.setupBar(to: CGFloat(viewModel.concentrationPercent(of: indexPath.row)))
         return cell
     }
 }

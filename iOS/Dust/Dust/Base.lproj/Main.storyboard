@@ -188,6 +188,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="concentrationBarView" destination="Aa1-9I-l2g" id="dgO-d2-dAz"/>
+                                            <outlet property="concentrationLabel" destination="YQj-Wc-qCS" id="hBa-n2-rCh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
