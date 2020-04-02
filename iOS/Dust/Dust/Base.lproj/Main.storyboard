@@ -211,7 +211,6 @@
                     <tabBarItem key="tabBarItem" title="미세먼지" image="smoke.fill" catalog="system" id="c4g-jZ-0fl"/>
                     <connections>
                         <outlet property="dustStatusTableView" destination="zLo-qO-87X" id="yJv-NX-1cR"/>
-                        <outlet property="stationLabel" destination="1B8-gL-nEJ" id="KbR-ve-hOX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZe-kp-m4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

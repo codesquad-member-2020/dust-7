@@ -9,14 +9,14 @@
 import Foundation
 
 enum UpdateEvent {
-    case station(name: String)
-    case dustStatus([DustObservation])
+    case station
+    case dustStatus
     case requestFailed
     
     func post() {
         switch self {
-        case .station(name: _): UpdateEvent.center.post(name: .stationDidUpdate, object: self)
-        case .dustStatus(_): UpdateEvent.center.post(name: .dustStatusDidUpdate, object: self)
+        case .station: UpdateEvent.center.post(name: .stationDidUpdate, object: self)
+        case .dustStatus: UpdateEvent.center.post(name: .dustStatusDidUpdate, object: self)
         case .requestFailed: UpdateEvent.center.post(name: .requestFailed, object: self)
         }
     }

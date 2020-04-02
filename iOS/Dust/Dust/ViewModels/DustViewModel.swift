@@ -9,19 +9,36 @@
 import Foundation
 
 class DustViewModel {
+    
+    private var stationName = "" {
+        didSet { UpdateEvent.station.post() }
+    }
+    
+    private var observations = [DustObservation]() {
+        didSet { UpdateEvent.dustStatus.post() }
+    }
+    
+    var observationCount: Int {
+        return observations.count
+    }
+    
     func requestDustStatusOfCurrentLocation(x: Double, y: Double) {
-        Networking.requestNearestStation(x: x, y: y) { result in
+        Networking.requestNearestStation(x: x, y: y) { [weak self] result in
             switch result {
             case .failure: UpdateEvent.requestFailed.post()
             case let .success(station):
-                UpdateEvent.station(name: station.name).post()
-                Networking.requestDustStatus(station: station.name) { result in
+                self?.stationName = station.name
+                Networking.requestDustStatus(station: station.name) { [weak self] result in
                     switch result {
                     case .failure: UpdateEvent.requestFailed.post()
-                    case let .success(response): UpdateEvent.dustStatus(response.observations).post()
+                    case let .success(response): self?.observations = response.observations
                     }
                 }
             }
         }
+    }
+    
+    func concentration(of number: Int) -> Int {
+        return Int(observations[number].concentration) ?? 0
     }
 }

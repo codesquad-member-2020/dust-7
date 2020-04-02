@@ -10,12 +10,13 @@ import UIKit
 
 class DustViewController: UIViewController {
     
-    @IBOutlet weak var stationLabel: UILabel!
     @IBOutlet weak var dustStatusTableView: UITableView!
     
-    private let locationManagerDelegate = LocationManagerDelegate(with: DustViewModel())
     private let observers = Observers()
-    private let dustStatusTableViewDataSource = DustStatusTableViewDataSource()
+    private let dustViewModel = DustViewModel()
+    
+    private var locationManagerDelegate: LocationManagerDelegate?
+    private var dustStatusTableViewDataSource: DustStatusTableViewDataSource?
     
     private let alertController: UIAlertController = {
         let alert = UIAlertController(title: UserFacingMessage.networkErrorAlertTitle,
@@ -30,6 +31,7 @@ class DustViewController: UIViewController {
         super.viewDidLoad()
         
         addViewUpdatingObservers()
+        setupDelegates()
         
         dustStatusTableView.dataSource = dustStatusTableViewDataSource
         dustStatusTableView.rowHeight = 25
@@ -39,18 +41,21 @@ class DustViewController: UIViewController {
         observers.removeObservers()
     }
     
+    private func setupDelegates() {
+        locationManagerDelegate = LocationManagerDelegate(with: dustViewModel)
+        dustStatusTableViewDataSource = DustStatusTableViewDataSource(with: dustViewModel)
+    }
+    
     private func addViewUpdatingObservers() {
         observers.addObserver(forName: .stationDidUpdate) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
-            if case let .station(name: name) = event {
-                self?.stationLabel.text = name
+            if case .station = event {
             }
         }
         
         observers.addObserver(forName: .dustStatusDidUpdate) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
-            if case let .dustStatus(observations) = event {
-                self?.dustStatusTableViewDataSource.setObservations(to: observations)
+            if case .dustStatus = event {
                 self?.dustStatusTableView.reloadData()
             }
         }

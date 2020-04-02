@@ -9,21 +9,23 @@
 import UIKit
 
 class DustStatusTableViewDataSource: NSObject {
-    private var observations = [DustObservation]()
     
-    func setObservations(to observations: [DustObservation]) {
-        self.observations = observations
+    private let viewModel: DustViewModel
+    
+    init(with viewModel: DustViewModel) {
+        self.viewModel = viewModel
+        super.init()
     }
 }
 
 extension DustStatusTableViewDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        observations.count
+        viewModel.observationCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: DustStatusCell.reuseIdentifier, for: indexPath) as? DustStatusCell, let concentration = Int(observations[indexPath.row].concentration) else { return UITableViewCell() }
-        cell.setupBar(to: CGFloat(concentration))
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DustStatusCell.reuseIdentifier, for: indexPath) as? DustStatusCell else { return UITableViewCell() }
+        cell.setupBar(to: CGFloat(viewModel.concentration(of: indexPath.row)))
         return cell
     }
 }
