@@ -15,4 +15,9 @@ class DustStatusView: UIView {
     @IBOutlet var observationTimeLabel: UILabel!
     @IBOutlet var stationLabel: UILabel!
     
+    var viewModel: DustViewModel?
+    
+    func updateStationLabel() {
+        stationLabel.text = viewModel?.stationName
+    }
 }

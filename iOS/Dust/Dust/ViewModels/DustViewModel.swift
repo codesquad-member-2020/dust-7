@@ -10,7 +10,7 @@ import Foundation
 
 class DustViewModel {
     
-    private var stationName = "" {
+    private(set) var stationName = "" {
         didSet { UpdateEvent.station.post() }
     }
     

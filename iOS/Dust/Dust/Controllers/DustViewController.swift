@@ -11,6 +11,7 @@ import UIKit
 class DustViewController: UIViewController {
     
     @IBOutlet weak var dustStatusTableView: UITableView!
+    @IBOutlet weak var dustStatusView: DustStatusView!
     
     private let observers = Observers()
     private let dustViewModel = DustViewModel()
@@ -32,7 +33,7 @@ class DustViewController: UIViewController {
         super.viewDidLoad()
         
         addViewUpdatingObservers()
-        setupDelegates()
+        setupViewModels()
         
         dustStatusTableView.dataSource = dustStatusTableViewDataSource
         dustStatusTableView.rowHeight = 25
@@ -42,16 +43,18 @@ class DustViewController: UIViewController {
         observers.removeObservers()
     }
     
-    private func setupDelegates() {
+    private func setupViewModels() {
         locationManagerDelegate = LocationManagerDelegate(with: dustViewModel)
         dustStatusTableViewDelegate = DustStatusTableViewDelegate(with: dustViewModel)
         dustStatusTableViewDataSource = DustStatusTableViewDataSource(with: dustViewModel)
+        dustStatusView.viewModel = dustViewModel
     }
     
     private func addViewUpdatingObservers() {
         observers.addObserver(forName: .stationDidUpdate) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
             if case .station = event {
+                self?.dustStatusView.updateStationLabel()
             }
         }
         
