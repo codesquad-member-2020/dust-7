@@ -87,7 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WC-ck-EeN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3WC-ck-EeN" customClass="DustStatusView" customModule="Dust" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="384.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미세먼지 앱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPC-rB-U7I">
@@ -156,6 +156,13 @@
                                     <constraint firstItem="Wtt-71-u06" firstAttribute="centerX" secondItem="3WC-ck-EeN" secondAttribute="centerX" id="gOs-Wa-fnl"/>
                                     <constraint firstItem="cPC-rB-U7I" firstAttribute="top" secondItem="3WC-ck-EeN" secondAttribute="top" constant="20" id="mYL-LW-aDN"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="concentrationLabel" destination="kUP-qt-Bup" id="XAq-gD-vRf"/>
+                                    <outlet property="observationTimeLabel" destination="HBF-5U-Ms8" id="rFk-uf-tr7"/>
+                                    <outlet property="stationLabel" destination="1B8-gL-nEJ" id="pvk-5s-DKn"/>
+                                    <outlet property="statusImageView" destination="njM-VM-h6F" id="FYk-CX-c71"/>
+                                    <outlet property="statusLabel" destination="83I-cu-u8n" id="wn7-qs-K4j"/>
+                                </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zLo-qO-87X">
                                 <rect key="frame" x="0.0" y="428.5" width="414" height="384.5"/>
