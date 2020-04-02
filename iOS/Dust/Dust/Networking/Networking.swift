@@ -50,7 +50,21 @@ class Networking {
         }.resume()
     }
     
-    static func requestForecast(completion: @escaping (Result<Forecast, Error>) -> Void) {
+    static func requestForecast(completion: @escaping (Result<ForecastResponse, Error>) -> Void) {
         guard let url = APIRouter.forecast.url else { return }
+        
+        URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            guard let data = data else { return }
+            do {
+                let response = try JSONDecoder().decode(ForecastResponse.self, from: data)
+                completion(.success(response))
+            } catch {
+                completion(.failure(error))
+            }
+        }.resume()
     }
 }
