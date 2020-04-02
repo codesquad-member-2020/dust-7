@@ -7,18 +7,19 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.DefaultUriBuilderFactory;
+
 import java.time.LocalDate;
 
 public class OpenApiRequestData {
-//  OPEN API KEY
+    //  OPEN API KEY
     public static final String AIR_SERVICEKEY = "afCrvgZOg17BFetVIzUT3QbEQ4f0E4G1fmPGkRUbQwEpAbNgKNWDtydvCFeX7580oiT6FUsuCae398DYvYoN%2BQ%3D%3D";
     public static final String KAKAO_TOKEN = "KakaoAK ac2b1f730c8654ca8bff36525a578c41";
 
-//  OPEN API 공통 주소
+    //  OPEN API 공통 주소
     public static final String AIR_BASE_URL = "http://openapi.airkorea.or.kr/openapi/services/rest";
     public static final String KAKAO_BASE_URL = "https://dapi.kakao.com";
 
-//  OPEN API 요청 PATH
+    //  OPEN API 요청 PATH
     public static final String DUST_DATA_PATH = "/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty";
     public static final String FORECAST_DATA_PATH = "/ArpltnInforInqireSvc/getMinuDustFrcstDspth";
     public static final String STATION_INFO_DATA_PATH = "/MsrstnInfoInqireSvc/getNearbyMsrstnList";

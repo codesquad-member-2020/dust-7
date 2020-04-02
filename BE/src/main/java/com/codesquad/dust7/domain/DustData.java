@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter @Setter @ToString
+@Getter
+@Setter
+@ToString
 public class DustData {
     private String dataTime;
     private String pm10Grade;
@@ -18,23 +20,18 @@ public class DustData {
         this.pmMessage = getPmMessage(pm10Grade);
     }
 
-    public String getPmMessage(String pm10Grade){
-        switch (pm10Grade){
-            case "1" : {
+    public String getPmMessage(String pm10Grade) {
+        switch (pm10Grade) {
+            case "1":
                 return "좋음";
-            }
-            case "2" : {
+            case "2":
                 return "보통";
-            }
-            case "3" : {
+            case "3":
                 return "나쁨";
-            }
-            case "4" : {
+            case "4":
                 return "매우 나쁨";
-            }
-            default: {
+            default:
                 return "몰라";
-            }
         }
 
     }

@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter @Setter @ToString
+@Getter
+@Setter
+@ToString
 public class StationInfoData {
     private String stationName;
     private String address;

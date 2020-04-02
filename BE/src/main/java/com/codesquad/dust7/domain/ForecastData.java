@@ -1,6 +1,5 @@
 package com.codesquad.dust7.domain;
 
-import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
