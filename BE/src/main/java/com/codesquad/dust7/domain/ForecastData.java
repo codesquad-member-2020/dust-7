@@ -1,6 +1,5 @@
-package com.codesquad.dust7;
+package com.codesquad.dust7.domain;
 
-import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -8,7 +7,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class DailyAirCondition {
+public class ForecastData {
     private String dataTime;
     private String imageUrl1;
     private String imageUrl2;
@@ -17,8 +16,9 @@ public class DailyAirCondition {
     private String informGrade;
     private String informCause;
     private String informOverall;
+    private String informData;
 
-    public DailyAirCondition(String dataTime, String imageUrl1, String imageUrl2, String imageUrl3, String gifFile, String informGrade, String informCause, String informOverall) {
+    public ForecastData(String dataTime, String imageUrl1, String imageUrl2, String imageUrl3, String gifFile, String informGrade, String informCause, String informOverall, String informData) {
         this.dataTime = dataTime;
         this.imageUrl1 = imageUrl1;
         this.imageUrl2 = imageUrl2;
@@ -27,5 +27,6 @@ public class DailyAirCondition {
         this.informGrade = informGrade;
         this.informCause = informCause;
         this.informOverall = informOverall;
+        this.informData = informData;
     }
 }
