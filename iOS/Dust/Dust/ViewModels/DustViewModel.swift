@@ -18,6 +18,10 @@ class DustViewModel {
         didSet { UpdateEvent.dustStatus.post() }
     }
     
+    private var rowToDisplay = 0 {
+        didSet { UpdateEvent.displayedRow.post() }
+    }
+    
     private var maxConcentration = 150.0
     
     var observationCount: Int {
@@ -38,6 +42,10 @@ class DustViewModel {
                 }
             }
         }
+    }
+    
+    func changeRowToDisplay(to row: Int) {
+        rowToDisplay = row
     }
     
     func concentration(of row: Int) -> String {

@@ -16,6 +16,7 @@ class DustViewController: UIViewController {
     private let dustViewModel = DustViewModel()
     
     private var locationManagerDelegate: LocationManagerDelegate?
+    private var dustStatusTableViewDelegate: DustStatusTableViewDelegate?
     private var dustStatusTableViewDataSource: DustStatusTableViewDataSource?
     
     private let alertController: UIAlertController = {
@@ -43,6 +44,7 @@ class DustViewController: UIViewController {
     
     private func setupDelegates() {
         locationManagerDelegate = LocationManagerDelegate(with: dustViewModel)
+        dustStatusTableViewDelegate = DustStatusTableViewDelegate(with: dustViewModel)
         dustStatusTableViewDataSource = DustStatusTableViewDataSource(with: dustViewModel)
     }
     
@@ -60,9 +62,13 @@ class DustViewController: UIViewController {
             }
         }
         
-        observers.addObserver(forName: .requestFailed) { [weak self] _ in
+        observers.addObserver(forName: .requestDidFailed) { [weak self] _ in
             guard let alert = self?.alertController else { return }
             self?.present(alert, animated: true)
+        }
+        
+        observers.addObserver(forName: .displayedRowDidChanged) { [weak self] _ in
+            
         }
     }
 }
