@@ -22,7 +22,7 @@ public class DustController {
         }
     }
 
-    @GetMapping("/forecase")
+    @GetMapping("/forecast")
     public ResponseEntity<ApiResponseMessage> responseAirConditionResult() throws JSONException {
         DailyDustResult dailyDustResult = new DailyDustResult();
         try {

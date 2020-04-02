@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <script src="/js/jquery-2.2.0.min.js"></script>
+    <script>
+        $.ajax({ method : "GET",
+                url: "/forecast",
+                success: (data) => {
+                    console.log(data);
+                    console.log(data.message[0].dataTime);
+                    $("p").append("<br><strong>" + data.message[0].dataTime + "</strong>");
+                    $("p").append("<br><strong>" + data.message[0].informGrade + "</strong>");
+                    $("p").append("<br><strong>" + data.message[0].informCause + "</strong>");
+                    $("p").append("<strong>" + data.message[0].informOverall + "</strong>");
+
+                    $("p").append("<img src=' " + data.message[0].gifFile + " '/>");
+                    $("p").append("<img src=' " + data.message[0].imageUrl1 + " '/>");
+                    $("p").append("<img src=' " + data.message[0].imageUrl2 + " '/>");
+                    $("p").append("<img src=' " + data.message[0].imageUrl3 + " '/>");
+
+                }
+        });
+
+
+    </script>
+</head>
+<body>
+<p> 미세먼지 예보<p>
+<div id="contents"></div>
+</body>
+</html>
+
