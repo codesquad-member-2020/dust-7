@@ -34,6 +34,7 @@
 		C2A4C12124360819005B41FE /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12024360819005B41FE /* UIImageExtension.swift */; };
 		C2A4C12524361B9D005B41FE /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */; };
 		C2A4C12724368932005B41FE /* ForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12624368932005B41FE /* ForecastResponse.swift */; };
+		C2A4C12B24368D33005B41FE /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12A24368D33005B41FE /* ForecastViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		C2A4C12024360819005B41FE /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		C2A4C12624368932005B41FE /* ForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastResponse.swift; sourceTree = "<group>"; };
+		C2A4C12A24368D33005B41FE /* ForecastViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				C2725B05243228F0000E4A38 /* DustViewModel.swift */,
+				C2A4C12A24368D33005B41FE /* ForecastViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				C2725B092432293F000E4A38 /* LocationManagerDelegate.swift in Sources */,
 				C226A1112435DF1A0098CEFC /* DustStatusTableViewDelegate.swift in Sources */,
 				C226A10D2435BF3C0098CEFC /* DustStatusTableViewDataSource.swift in Sources */,
+				C2A4C12B24368D33005B41FE /* ForecastViewModel.swift in Sources */,
 				C2725B0F24323383000E4A38 /* Endpoints.swift in Sources */,
 				C2725B0C24322EFF000E4A38 /* UpdateEvent.swift in Sources */,
 			);

@@ -9,10 +9,11 @@
 import UIKit
 
 class ForecastViewController: UIViewController {
-
+    
+    private let forecastViewModel = ForecastViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        forecastViewModel.requestForecast()
     }
 }
