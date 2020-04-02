@@ -35,6 +35,7 @@
 		C2A4C12524361B9D005B41FE /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */; };
 		C2A4C12724368932005B41FE /* ForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12624368932005B41FE /* ForecastResponse.swift */; };
 		C2A4C12B24368D33005B41FE /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12A24368D33005B41FE /* ForecastViewModel.swift */; };
+		C2A4C12D2436A3C1005B41FE /* GIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12C2436A3C1005B41FE /* GIFImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		C2A4C12624368932005B41FE /* ForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastResponse.swift; sourceTree = "<group>"; };
 		C2A4C12A24368D33005B41FE /* ForecastViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
+		C2A4C12C2436A3C1005B41FE /* GIFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				C2725B1724323D31000E4A38 /* Obervers.swift */,
 				C226A1042434CB210098CEFC /* UserFacingMessage.swift */,
 				C2A4C12624368932005B41FE /* ForecastResponse.swift */,
+				C2A4C12C2436A3C1005B41FE /* GIFImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				C226A10A2434FA790098CEFC /* UITableViewExtension.swift in Sources */,
 				C2A15E4624345029008D5886 /* DustStatusResponse.swift in Sources */,
 				C226A10F2435C4F20098CEFC /* UIColorExtension.swift in Sources */,
+				C2A4C12D2436A3C1005B41FE /* GIFImage.swift in Sources */,
 				C2725B022430E269000E4A38 /* ForecastViewController.swift in Sources */,
 				C226A1082434FA2D0098CEFC /* DustStatusCell.swift in Sources */,
 				C2725B06243228F0000E4A38 /* DustViewModel.swift in Sources */,

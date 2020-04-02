@@ -14,7 +14,7 @@ class ForecastViewModel {
         didSet { UpdateEvent.forecastMessage.post() }
     }
     
-    private(set) var forecastGIF = Data() {
+    private(set) var forecastGIF: NSObject? = nil {
         didSet { UpdateEvent.forecastGIF.post() }
     }
     
@@ -28,7 +28,7 @@ class ForecastViewModel {
                 Networking.requestForecastGIF(forecast?.gifImage ?? "") { [weak self] result in
                     switch result {
                     case .failure: UpdateEvent.requestFailed.post()
-                    case let .success(response): self?.forecastGIF = response
+                    case let .success(response): self?.forecastGIF = GIFImage().create(with: response)
                     }
                 }
             }

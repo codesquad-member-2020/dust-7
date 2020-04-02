@@ -33,7 +33,7 @@ class ForecastViewController: UIViewController {
     }
     
     private func updateForecastGIF() {
-        
+        foreCastImageView.image = viewModel.forecastGIF as? UIImage
     }
     
     private func addViewUpdatingObservers() {
