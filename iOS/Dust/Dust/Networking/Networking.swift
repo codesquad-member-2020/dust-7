@@ -49,4 +49,8 @@ class Networking {
             }
         }.resume()
     }
+    
+    static func requestForecast(completion: @escaping (Result<Forecast, Error>) -> Void) {
+        guard let url = APIRouter.forecast.url else { return }
+    }
 }
