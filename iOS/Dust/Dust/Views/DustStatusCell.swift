@@ -12,4 +12,10 @@ class DustStatusCell: UITableViewCell {
     
     @IBOutlet weak var concentrationBarView: UIView!
     
+    private let maxConcentration = CGFloat(150)
+    
+    func setupBar(to percent: CGFloat) {
+        let multiplier = percent / maxConcentration
+        concentrationBarView.frame.size.width = contentView.frame.width * multiplier
+    }
 }

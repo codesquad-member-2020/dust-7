@@ -12,7 +12,7 @@ struct NearestStationResponse: Decodable {
     let nearestStation: [Station]
     
     enum CodingKeys: String, CodingKey {
-        case nearestStation = "message"
+        case nearestStation = "responseMessage"
     }
     
     var name: String {
