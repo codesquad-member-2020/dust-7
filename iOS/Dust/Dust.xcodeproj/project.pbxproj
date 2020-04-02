@@ -33,6 +33,7 @@
 		C2A4C11F2435E696005B41FE /* DustStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C11E2435E696005B41FE /* DustStatusView.swift */; };
 		C2A4C12124360819005B41FE /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12024360819005B41FE /* UIImageExtension.swift */; };
 		C2A4C12524361B9D005B41FE /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */; };
+		C2A4C12724368932005B41FE /* ForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12624368932005B41FE /* ForecastResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		C2A4C11E2435E696005B41FE /* DustStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustStatusView.swift; sourceTree = "<group>"; };
 		C2A4C12024360819005B41FE /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		C2A4C12624368932005B41FE /* ForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 				C2A15E4524345029008D5886 /* DustStatusResponse.swift */,
 				C2725B1724323D31000E4A38 /* Obervers.swift */,
 				C226A1042434CB210098CEFC /* UserFacingMessage.swift */,
+				C2A4C12624368932005B41FE /* ForecastResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				C2725B1824323D31000E4A38 /* Obervers.swift in Sources */,
 				C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */,
 				C2725AE22430E090000E4A38 /* SceneDelegate.swift in Sources */,
+				C2A4C12724368932005B41FE /* ForecastResponse.swift in Sources */,
 				C2725B1624323A37000E4A38 /* NearestStationResponse.swift in Sources */,
 				C226A1052434CB210098CEFC /* UserFacingMessage.swift in Sources */,
 				C2725B092432293F000E4A38 /* LocationManagerDelegate.swift in Sources */,

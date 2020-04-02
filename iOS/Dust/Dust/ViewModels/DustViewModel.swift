@@ -22,7 +22,7 @@ class DustViewModel {
         didSet { UpdateEvent.displayedRow.post() }
     }
     
-    private var maxConcentration = 150.0
+    private let maxConcentration = 150.0
     
     var observationCount: Int {
         return observations.count
