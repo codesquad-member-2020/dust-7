@@ -43,7 +43,6 @@ public class OpenApiRequestURL {
             urlBuilder.append("&" + URLEncoder.encode("searchDate", "UTF-8") + "=" + URLEncoder.encode(yesterDay.toString(), "UTF-8")); /*통보시간 검색 (조회 날짜 입력 없을 경우 한달동안 예보통보 발령 날짜의 리스트 정보를 확인)*/
             urlBuilder.append("&" + URLEncoder.encode("InformCode", "UTF-8") + "=" + URLEncoder.encode("PM10", "UTF-8")); /*통보코드검색 (PM10 : 미세먼지 PM25 : 초미세먼지 O3 : 오존)*/
             urlBuilder.append("&" + URLEncoder.encode("_returnType", "UTF-8") + "=" + URLEncoder.encode("json", "UTF-8"));
-            System.out.println(urlBuilder.toString());
             return new URL(urlBuilder.toString());
         } catch (UnsupportedEncodingException | MalformedURLException e) {
             System.out.println("여기 로거로 변경해서 에러 찍으면 된다.");

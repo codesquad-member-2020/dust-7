@@ -33,9 +33,6 @@ public class OpenApiGetData {
         rd.close();
         conn.disconnect();
 
-        String result = sb.toString();
-        System.out.println(result);
-
         try {
             JSONObject json = new JSONObject(sb.toString());
             return (JSONArray) json.get("list");
@@ -66,7 +63,6 @@ public class OpenApiGetData {
         rd.close();
         conn.disconnect();
 
-        String result = sb.toString();
         try {
             JSONObject json = new JSONObject(sb.toString());
             return (JSONArray) json.get("list");
@@ -78,7 +74,6 @@ public class OpenApiGetData {
 
     public JSONObject kakaoTransferAPI(String coordX, String coordY) throws IOException {
         URL url = OpenApiRequestURL.coordinateTransferRequestURL(coordX,coordY);
-        System.out.println(url.toString());
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.setRequestProperty("Authorization", "KakaoAK ac2b1f730c8654ca8bff36525a578c41");
@@ -98,9 +93,8 @@ public class OpenApiGetData {
         rd.close();
         conn.disconnect();
 
-        String result = sb.toString();
         try {
-            JSONObject json = new JSONObject(result);
+            JSONObject json = new JSONObject(sb.toString());
             JSONArray jsonArray = (JSONArray) json.get("documents");
             return jsonArray.getJSONObject(0);
         } catch (JSONException e) {
@@ -130,7 +124,6 @@ public class OpenApiGetData {
         rd.close();
         conn.disconnect();
 
-        String result = sb.toString();
         try {
             JSONObject json = new JSONObject(sb.toString());
             return (JSONArray) json.get("list");
