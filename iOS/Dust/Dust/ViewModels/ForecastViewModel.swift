@@ -18,9 +18,15 @@ class ForecastViewModel {
         Networking.requestForecast { [weak self] result in
             switch result {
             case .failure: UpdateEvent.requestFailed.post()
-            case let .success(response): self?.forecast = response.forecasts.first
+            case let .success(response):
+                self?.forecast = response.forecasts.first
+                Networking.requestForecastGIF(response.forecasts.first?.gifImage ?? "") { result in
+                    switch result {
+                    case .failure: UpdateEvent.requestFailed.post()
+                    case let .success(response): return
+                    }
+                }
             }
         }
     }
-    
 }
