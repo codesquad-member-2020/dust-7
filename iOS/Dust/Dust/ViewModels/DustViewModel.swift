@@ -48,4 +48,8 @@ class DustViewModel {
         guard let concentration = Int(observations[row].concentration) else { return 0 }
         return Double(concentration) / maxConcentration
     }
+    
+    func grade(of row: Int) -> String {
+        return observations[row].grade
+    }
 }

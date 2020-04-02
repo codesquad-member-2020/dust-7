@@ -20,4 +20,8 @@ class DustStatusCell: UITableViewCell {
     func setupLabel(to number: String) {
         concentrationLabel.text = number
     }
+    
+    func setupBarColer(to color: UIColor?) {
+        concentrationBarView.backgroundColor = color
+    }
 }
