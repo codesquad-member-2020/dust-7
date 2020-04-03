@@ -43,7 +43,7 @@ html::-webkit-scrollbar {
 }
 
 /* Phone Device */
-@media all and (min-width:375px) {
+@media (min-width:375px) and (max-width: 575px) {
 
     body {
         text-align: center;
@@ -62,6 +62,14 @@ html::-webkit-scrollbar {
         justify-content: center;
         align-items: center;
         font-size: 1rem;
+    }
+
+    .dust-graph-ul {
+        list-style: none;
+    }
+
+    .dust-graph-ul > li > div {
+        text-align: right;
     }
     
 }
