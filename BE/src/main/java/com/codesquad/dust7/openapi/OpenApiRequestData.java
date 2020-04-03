@@ -25,7 +25,7 @@ public class OpenApiRequestData {
     public static final String STATION_INFO_DATA_PATH = "/MsrstnInfoInqireSvc/getNearbyMsrstnList";
     public static final String COORDINATE_TRANSFER_DATA_PATH = "/v2/local/geo/transcoord.json";
 
-    public static JSONArray getdustData(String stationName) throws JSONException {
+    public static JSONArray getdustData(String stationName) {
         DefaultUriBuilderFactory factory = new DefaultUriBuilderFactory(AIR_BASE_URL);
         factory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.NONE);
         WebClient client = WebClient.builder().uriBuilderFactory(factory).build();
@@ -39,9 +39,11 @@ public class OpenApiRequestData {
                 .queryParam("ver", "1.3")
                 .queryParam("_returnType", "json")
                 .build()).retrieve().bodyToMono(String.class).block();
-
-        JSONObject json = new JSONObject(response);
-        return json.getJSONArray("list");
+        try {
+            JSONObject json = new JSONObject(response);
+            return json.getJSONArray("list");
+        } catch (JSONException e){}
+        return null;
     }
 
     public static JSONArray getforecastData() throws JSONException {
@@ -56,8 +58,11 @@ public class OpenApiRequestData {
                 .queryParam("_returnType", "json")
                 .build()).retrieve().bodyToMono(String.class).block();
 
-        JSONObject json = new JSONObject(response);
-        return json.getJSONArray("list");
+        try {
+            JSONObject json = new JSONObject(response);
+            return json.getJSONArray("list");
+        } catch (JSONException e){}
+        return null;
     }
 
     public static JSONObject getWGS84Coordinate(String x, String y) throws JSONException {
@@ -94,7 +99,10 @@ public class OpenApiRequestData {
                 .queryParam("_returnType", "json")
                 .build()).retrieve().bodyToMono(String.class).block();
 
-        JSONObject json = new JSONObject(response);
-        return json.getJSONArray("list");
+        try {
+            JSONObject json = new JSONObject(response);
+            return json.getJSONArray("list");
+        } catch (JSONException e){}
+        return null;
     }
 }

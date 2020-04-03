@@ -15,16 +15,18 @@ public class StationInfoParser {
         final int STATION_INDEX = 0;
 
         JSONObject transferResult = OpenApiRequestData.getWGS84Coordinate(coordX, coordY);
-        JSONArray stations = OpenApiRequestData.getStationInformation(transferResult);
         ArrayList<StationInfoData> parseStationInformation = new ArrayList<>();
-
-        JSONObject nearestStation = stations.getJSONObject(STATION_INDEX);
-        String stationName = nearestStation.getString("stationName");
-        String address = nearestStation.getString("addr");
-        String length = nearestStation.getString("tm");
-        StationInfoData stationInformation = new StationInfoData(stationName, address, length);
-        parseStationInformation.add(stationInformation);
-
+        try{
+            JSONArray stations = OpenApiRequestData.getStationInformation(transferResult);
+            JSONObject nearestStation = stations.getJSONObject(STATION_INDEX);
+            String stationName = nearestStation.getString("stationName");
+            String address = nearestStation.getString("addr");
+            String length = nearestStation.getString("tm");
+            StationInfoData stationInformation = new StationInfoData(stationName, address, length);
+            parseStationInformation.add(stationInformation);
+            return parseStationInformation;
+        } catch (NullPointerException e){
+        }
         return parseStationInformation;
     }
 }

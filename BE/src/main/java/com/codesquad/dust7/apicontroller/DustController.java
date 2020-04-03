@@ -25,31 +25,46 @@ public class DustController {
     @GetMapping("/dust-status")
     public ResponseEntity<ApiResponseMessage> responseDayDustResult(@RequestParam String stationName) throws JSONException {
         DustDataParser dustDataParser = new DustDataParser();
-        List<DustData> dustData = dustDataParser.DustDataParser(stationName);
-        if (dustData.isEmpty()) {
-            return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.badRequestMessage()), HttpStatus.BAD_REQUEST);
+
+        try {
+            List<DustData> dustData = dustDataParser.DustDataParser(stationName);
+            if (dustData.isEmpty()) {
+                return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.badRequestMessage()), HttpStatus.BAD_REQUEST);
+            }
+            return new ResponseEntity<>(new ApiResponseMessage(dustDataParser.DustDataParser(stationName)), HttpStatus.OK);
+        } catch (NullPointerException e){
+            return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.getnulldataMessage()), HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(new ApiResponseMessage(dustDataParser.DustDataParser(stationName)), HttpStatus.OK);
+
     }
 
     @GetMapping("/forecast")
     public ResponseEntity<ApiResponseMessage> responseAirConditionResult() throws JSONException {
         ForecastParser forcastParser = new ForecastParser();
-        List<ForecastData> forecastData = forcastParser.forcastDataParser();
-        if (forecastData.isEmpty()) {
-            return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.badRequestMessage()), HttpStatus.BAD_REQUEST);
+        try {
+            List<ForecastData> forecastData = forcastParser.forcastDataParser();
+            if (forecastData.isEmpty()) {
+                return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.badRequestMessage()), HttpStatus.BAD_REQUEST);
+            }
+            return new ResponseEntity<>(new ApiResponseMessage(forcastParser.forcastDataParser()), HttpStatus.OK);
+        } catch (NullPointerException e){
+            return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.getnulldataMessage()), HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(new ApiResponseMessage(forcastParser.forcastDataParser()), HttpStatus.OK);
     }
 
     @GetMapping("/location")
     public ResponseEntity<ApiResponseMessage> responseStationInfo(@RequestParam String coordinateWGS84) throws JSONException {
         StationInfoParser stationInfoParser = new StationInfoParser();
-        List<StationInfoData> stationInfoData = stationInfoParser.stationInformation(coordinateWGS84);
-        if (stationInfoData.isEmpty()) {
-            return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.badRequestMessage()), HttpStatus.BAD_REQUEST);
+        try {
+            List<StationInfoData> stationInfoData = stationInfoParser.stationInformation(coordinateWGS84);
+            if (stationInfoData.isEmpty()) {
+                return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.badRequestMessage()), HttpStatus.BAD_REQUEST);
+            }
+            return new ResponseEntity<>(new ApiResponseMessage(stationInfoParser.stationInformation(coordinateWGS84)), HttpStatus.OK);
+        } catch (NullPointerException e){
+            return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.getnulldataMessage()), HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(new ApiResponseMessage(stationInfoParser.stationInformation(coordinateWGS84)), HttpStatus.OK);
+
     }
 
 }
