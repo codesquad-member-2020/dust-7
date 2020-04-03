@@ -55,11 +55,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="cop-p0-Roj">
+                                <rect key="frame" x="188.5" y="328.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cop-p0-Roj" firstAttribute="centerY" secondItem="qDK-aW-2SE" secondAttribute="centerY" id="0Hm-Lf-iFX"/>
                             <constraint firstItem="efe-JY-gkj" firstAttribute="trailing" secondItem="58f-C7-p3c" secondAttribute="trailing" constant="20" id="EJc-wS-u48"/>
                             <constraint firstItem="qDK-aW-2SE" firstAttribute="leading" secondItem="efe-JY-gkj" secondAttribute="leading" id="JaD-ZS-Uh0"/>
+                            <constraint firstItem="cop-p0-Roj" firstAttribute="centerX" secondItem="qDK-aW-2SE" secondAttribute="centerX" id="Oy0-2P-D2P"/>
                             <constraint firstItem="efe-JY-gkj" firstAttribute="trailing" secondItem="Suj-SG-Gzi" secondAttribute="trailing" constant="20" id="WD6-58-EeE"/>
                             <constraint firstItem="Suj-SG-Gzi" firstAttribute="leading" secondItem="efe-JY-gkj" secondAttribute="leading" constant="20" id="YJU-Lj-GsM"/>
                             <constraint firstItem="Suj-SG-Gzi" firstAttribute="top" secondItem="qDK-aW-2SE" secondAttribute="bottom" constant="8" id="a30-bO-ZRH"/>
@@ -77,7 +82,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="예보" image="clock.fill" catalog="system" id="K9P-Kf-map"/>
                     <connections>
-                        <outlet property="foreCastImageView" destination="qDK-aW-2SE" id="Hrx-PR-Rvt"/>
+                        <outlet property="activityIndicator" destination="cop-p0-Roj" id="9I0-cE-EQs"/>
+                        <outlet property="forecastImageView" destination="qDK-aW-2SE" id="Hrx-PR-Rvt"/>
                         <outlet property="forecastMessageLabel" destination="Suj-SG-Gzi" id="2Ms-hN-yVe"/>
                         <outlet property="gradeForecastLabel" destination="ePs-ed-Jyj" id="JGx-EW-kve"/>
                     </connections>

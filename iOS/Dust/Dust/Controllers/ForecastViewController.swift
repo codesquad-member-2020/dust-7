@@ -12,7 +12,8 @@ class ForecastViewController: UIViewController {
     
     @IBOutlet weak var forecastMessageLabel: UILabel!
     @IBOutlet weak var gradeForecastLabel: UILabel!
-    @IBOutlet weak var foreCastImageView: UIImageView!
+    @IBOutlet weak var forecastImageView: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let observers = Observers()
     private let viewModel = ForecastViewModel()
@@ -21,6 +22,9 @@ class ForecastViewController: UIViewController {
         super.viewDidLoad()
         addViewUpdatingObservers()
         viewModel.requestForecast()
+        activityIndicator.color = .white
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
     }
     
     deinit {
@@ -33,7 +37,7 @@ class ForecastViewController: UIViewController {
     }
     
     private func updateForecastGIF() {
-        foreCastImageView.image = viewModel.forecastGIF as? UIImage
+        forecastImageView.image = viewModel.forecastGIF as? UIImage
     }
     
     private func addViewUpdatingObservers() {
@@ -48,6 +52,7 @@ class ForecastViewController: UIViewController {
             guard let event = $0 as? UpdateEvent else { return }
             if case .forecastGIF = event {
                 self?.updateForecastGIF()
+                self?.activityIndicator.stopAnimating()
             }
         }
     }
