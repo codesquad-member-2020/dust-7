@@ -5,23 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dust</title>
+    <link rel="stylesheet" href="../style/dust.css">
 </head>
 
 <body>
     <div class="wrap">
         <div class="dust-nav">
-            <ul>
-                <li>
-                    <div class="dust-nav-box">
-                        <span>미세먼지</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="dust-nav-box">
-                        <span>예보</span>
-                    </div>
-                </li>
-            </ul>
+            <div class="dust-nav-box">미세먼지</div>
+            <div class="dust-nav-box">예보</div>
         </div>
         <div class="dust-container">
             <div class="dust-app">
@@ -40,7 +31,7 @@
                         </div>
                     </div>
                     <div class="dust-station">
-                        <span class="dust-gps"></span>
+                        <span class="dust-location"></span>
                         <span> 측정소 기준</span>
                     </div>
                 </div>
@@ -58,6 +49,7 @@
             </div>
         </div>
     </div>
+    <script type="module" src="../js/main.js"></script>
 </body>
 
 </html>
