@@ -69,7 +69,7 @@ public class OpenApiRequestData {
                 .queryParam("x", x)
                 .queryParam("y", y)
                 .queryParam("input_coord", "WGS84")
-                .queryParam("output_coord", "WTM")
+                .queryParam("output_coord", "TM")
                 .build())
                 .header(HttpHeaders.AUTHORIZATION, KAKAO_TOKEN)
                 .accept(MediaType.APPLICATION_JSON)
