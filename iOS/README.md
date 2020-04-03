@@ -1,5 +1,13 @@
 # Dust iOS
 
+**성공 시나리오 데모**
+
+![demo](demo.gif)
+
+**네트워크 에러 시나리오 데모**
+
+![demo-network-error](demo-network-error.gif)
+
 ## 단계별 구현 내용
 
 ### 가장 가까운 측정소 찾기
@@ -36,6 +44,9 @@
 * URL로부터 GIF 데이터 로드
 * GIF 재생
 * Activity Indicator 추가
+
+**실행 결과**
+![demo](demo.gif)
 
 [pr1]: https://github.com/codesquad-member-2020/dust-7/pull/8
 [pr2]: https://github.com/codesquad-member-2020/dust-7/pull/21
