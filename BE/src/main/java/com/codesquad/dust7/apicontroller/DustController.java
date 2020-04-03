@@ -32,10 +32,9 @@ public class DustController {
                 return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.badRequestMessage()), HttpStatus.BAD_REQUEST);
             }
             return new ResponseEntity<>(new ApiResponseMessage(dustDataParser.DustDataParser(stationName)), HttpStatus.OK);
-        } catch (NullPointerException e){
-            return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.getnulldataMessage()), HttpStatus.BAD_REQUEST);
+        } catch (NullPointerException e) {
+            return new ResponseEntity<>(new ApiResponseMessage("Data is null"), HttpStatus.BAD_REQUEST);
         }
-
     }
 
     @GetMapping("/forecast")
@@ -47,8 +46,8 @@ public class DustController {
                 return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.badRequestMessage()), HttpStatus.BAD_REQUEST);
             }
             return new ResponseEntity<>(new ApiResponseMessage(forcastParser.forcastDataParser()), HttpStatus.OK);
-        } catch (NullPointerException e){
-            return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.getnulldataMessage()), HttpStatus.BAD_REQUEST);
+        } catch (NullPointerException e) {
+            return new ResponseEntity<>(new ApiResponseMessage("Data is null"), HttpStatus.BAD_REQUEST);
         }
     }
 
@@ -61,10 +60,8 @@ public class DustController {
                 return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.badRequestMessage()), HttpStatus.BAD_REQUEST);
             }
             return new ResponseEntity<>(new ApiResponseMessage(stationInfoParser.stationInformation(coordinateWGS84)), HttpStatus.OK);
-        } catch (NullPointerException e){
-            return new ResponseEntity<>(new ApiResponseMessage(ErrorMessage.getnulldataMessage()), HttpStatus.BAD_REQUEST);
+        } catch (NullPointerException e) {
+            return new ResponseEntity<>(new ApiResponseMessage("Data is null"), HttpStatus.BAD_REQUEST);
         }
-
     }
-
 }
