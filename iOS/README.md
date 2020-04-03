@@ -2,11 +2,11 @@
 
 **성공 시나리오 데모**
 
-![demo](demo.gif)
+<p align="center"><img width=500 src="demo.gif"></p>
 
 **네트워크 에러 시나리오 데모**
 
-![demo-network-error](demo-network-error.gif)
+<p align="center"><img width=500 src="demo-network-error.gif"></p>
 
 ## 단계별 구현 내용
 
