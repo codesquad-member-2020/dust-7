@@ -13,6 +13,8 @@ enum UpdateEvent {
     case dustStatus
     case requestFailed
     case displayedRow
+    case forecastMessage
+    case forecastGIF
     
     func post() {
         switch self {
@@ -20,6 +22,8 @@ enum UpdateEvent {
         case .dustStatus: UpdateEvent.center.post(name: .dustStatusDidUpdate, object: self)
         case .requestFailed: UpdateEvent.center.post(name: .requestDidFailed, object: self)
         case .displayedRow: UpdateEvent.center.post(name: .displayedRowDidChanged, object: self)
+        case .forecastMessage: UpdateEvent.center.post(name: .forecastMessageDidUpdate, object: self)
+        case .forecastGIF: UpdateEvent.center.post(name: .forecastGIFDidUpdate, object: self)
         }
     }
 }
@@ -33,4 +37,6 @@ extension Notification.Name {
     static let dustStatusDidUpdate = Notification.Name(rawValue: "dustStatusDidUpdate")
     static let requestDidFailed = Notification.Name(rawValue: "requestFailed")
     static let displayedRowDidChanged = Notification.Name(rawValue: "displayedRowDidChanged")
+    static let forecastMessageDidUpdate = Notification.Name(rawValue: "forecastMessageDidUpdate")
+    static let forecastGIFDidUpdate = Notification.Name(rawValue: "forecastGIFDidUpdate")
 }

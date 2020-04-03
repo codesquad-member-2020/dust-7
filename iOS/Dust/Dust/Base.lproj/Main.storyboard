@@ -19,16 +19,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="미세먼지 예보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xju-4B-hat">
                                 <rect key="frame" x="99" y="64" width="216" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forecast" translatesAutoresizingMaskIntoConstraints="NO" id="qDK-aW-2SE">
-                                <rect key="frame" x="0.0" y="132" width="414" height="874"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDK-aW-2SE">
+                                <rect key="frame" x="0.0" y="132" width="414" height="430"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="430" id="Lfi-fA-qLq"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="○ [미세먼지] 수도권·충청권·광주·전북은 ‘나쁨’, 그 밖의 권역은 ‘보통’으로 예상됨. 다만, 강원영서·대구는 오전에 ‘나쁨’ 수준일 것으로 예상됨." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-SG-Gzi">
-                                <rect key="frame" x="20" y="1014" width="374" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="○" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-SG-Gzi">
+                                <rect key="frame" x="20" y="570" width="374" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="58f-C7-p3c">
@@ -46,18 +49,22 @@
                                     </slider>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePs-ed-Jyj">
-                                <rect key="frame" x="20" y="1063" width="374" height="36"/>
-                                <string key="text">서울 : 보통,제주 : 좋음,전남 : 좋음,전북 : 보통,광주 : 좋음,경남 : 좋음,경북 : 보통,울산 : 좋음,대구 : 보통,부산 : 좋음,충남 : 보통,충북 : 보통,세종 : 보통,대전 : 보통,영동 : 좋음,영서 : 보통,경기남부 : 보통,경기북부 : 보통,인천 : 보통</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePs-ed-Jyj">
+                                <rect key="frame" x="20" y="604.5" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" name="detailTextGray"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="cop-p0-Roj">
+                                <rect key="frame" x="188.5" y="328.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cop-p0-Roj" firstAttribute="centerY" secondItem="qDK-aW-2SE" secondAttribute="centerY" id="0Hm-Lf-iFX"/>
                             <constraint firstItem="efe-JY-gkj" firstAttribute="trailing" secondItem="58f-C7-p3c" secondAttribute="trailing" constant="20" id="EJc-wS-u48"/>
                             <constraint firstItem="qDK-aW-2SE" firstAttribute="leading" secondItem="efe-JY-gkj" secondAttribute="leading" id="JaD-ZS-Uh0"/>
+                            <constraint firstItem="cop-p0-Roj" firstAttribute="centerX" secondItem="qDK-aW-2SE" secondAttribute="centerX" id="Oy0-2P-D2P"/>
                             <constraint firstItem="efe-JY-gkj" firstAttribute="trailing" secondItem="Suj-SG-Gzi" secondAttribute="trailing" constant="20" id="WD6-58-EeE"/>
                             <constraint firstItem="Suj-SG-Gzi" firstAttribute="leading" secondItem="efe-JY-gkj" secondAttribute="leading" constant="20" id="YJU-Lj-GsM"/>
                             <constraint firstItem="Suj-SG-Gzi" firstAttribute="top" secondItem="qDK-aW-2SE" secondAttribute="bottom" constant="8" id="a30-bO-ZRH"/>
@@ -74,6 +81,12 @@
                         <viewLayoutGuide key="safeArea" id="efe-JY-gkj"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="예보" image="clock.fill" catalog="system" id="K9P-Kf-map"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="cop-p0-Roj" id="9I0-cE-EQs"/>
+                        <outlet property="forecastImageView" destination="qDK-aW-2SE" id="Hrx-PR-Rvt"/>
+                        <outlet property="forecastMessageLabel" destination="Suj-SG-Gzi" id="2Ms-hN-yVe"/>
+                        <outlet property="gradeForecastLabel" destination="ePs-ed-Jyj" id="JGx-EW-kve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkq-wT-x8R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,13 +260,9 @@
     </scenes>
     <resources>
         <image name="clock.fill" catalog="system" width="64" height="60"/>
-        <image name="forecast" width="375" height="437"/>
         <image name="placeholder" width="50" height="50"/>
         <image name="play.fill" catalog="system" width="58" height="64"/>
         <image name="smoke.fill" catalog="system" width="64" height="44"/>
-        <namedColor name="detailTextGray">
-            <color red="0.35294117647058826" green="0.35294117647058826" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="goodBlue">
             <color red="0.33333333333333331" green="0.69803921568627447" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

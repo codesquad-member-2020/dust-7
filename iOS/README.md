@@ -1,5 +1,13 @@
 # Dust iOS
 
+**성공 시나리오 데모**
+
+![demo](demo.gif)
+
+**네트워크 에러 시나리오 데모**
+
+![demo-network-error](demo-network-error.gif)
+
 ## 단계별 구현 내용
 
 ### 가장 가까운 측정소 찾기
@@ -26,6 +34,22 @@
 **실행 결과**
 ![result2](result2.png)
 
+### 미세먼지 예보 GIF 이미지 디스플레이
+
+> [PR #30 [iOS] 미세먼지 예보 GIF 이미지 디스플레이][pr3]
+
+* 미세먼지 예보 응답 모델 구현
+* 예보 탭 ViewModel 구현 및 서버 응답 받기
+* 노티피케이션을 통해 미세먼지 예보 메시지 업데이트
+* URL로부터 GIF 데이터 로드
+* GIF 재생
+* Activity Indicator 추가
+
+**실행 결과**
+![demo](demo.gif)
+
 [pr1]: https://github.com/codesquad-member-2020/dust-7/pull/8
 [pr2]: https://github.com/codesquad-member-2020/dust-7/pull/21
+[pr3]: https://github.com/codesquad-member-2020/dust-7/pull/30
+
 

@@ -11,11 +11,13 @@ import Foundation
 enum APIRouter {
     case station(x: Double, y: Double)
     case dust(station: String)
+    case forecast
     
     private var path: String {
         switch self {
         case .station: return Endpoints.nearestStationRequestURL
         case .dust: return Endpoints.dustStatusRequestURL
+        case .forecast: return Endpoints.forecastRequestURL
         }
     }
     
@@ -23,6 +25,7 @@ enum APIRouter {
         switch self {
         case let .station(x: x, y: y): return "coordinateWGS84=\(y),\(x)"
         case let .dust(station: station): return "stationName=\(station)"
+        case .forecast: return ""
         }
     }
     

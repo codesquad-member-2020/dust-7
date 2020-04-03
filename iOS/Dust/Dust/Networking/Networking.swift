@@ -49,4 +49,35 @@ class Networking {
             }
         }.resume()
     }
+    
+    static func requestForecast(completion: @escaping (Result<ForecastResponse, Error>) -> Void) {
+        guard let url = APIRouter.forecast.url else { return }
+        
+        URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            guard let data = data else { return }
+            do {
+                let response = try JSONDecoder().decode(ForecastResponse.self, from: data)
+                completion(.success(response))
+            } catch {
+                completion(.failure(error))
+            }
+        }.resume()
+    }
+    
+    static func requestForecastGIF(_ url: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        guard let url = URL(string: url) else { return }
+        
+        URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            guard let data = data else { return }
+            completion(.success(data))
+        }.resume()
+    }
 }

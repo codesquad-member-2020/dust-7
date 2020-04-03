@@ -17,9 +17,9 @@ extension UIColor {
 }
 
 extension UIColor {
-    static let colorForGrade: Dictionary<String, UIColor> = ["0": .white,
-                                                             "1": .goodBlue,
-                                                             "2": .moderateGreen,
-                                                             "3": .unhealthyOrange,
-                                                             "4": .hazardousRed]
+    static let colorForGrade: Dictionary<Int, UIColor> = [0: .white,
+                                                          1: .goodBlue,
+                                                          2: .moderateGreen,
+                                                          3: .unhealthyOrange,
+                                                          4: .hazardousRed]
 }
