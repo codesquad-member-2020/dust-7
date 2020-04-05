@@ -13,7 +13,7 @@ enum UpdateEvent {
     case dustStatus
     case requestFailed
     case displayedRow
-    case forecastMessage
+    case forecast(Forecast)
     case forecastGIF
     
     func post() {
@@ -22,7 +22,7 @@ enum UpdateEvent {
         case .dustStatus: UpdateEvent.center.post(name: .dustStatusDidUpdate, object: self)
         case .requestFailed: UpdateEvent.center.post(name: .requestDidFailed, object: self)
         case .displayedRow: UpdateEvent.center.post(name: .displayedRowDidChanged, object: self)
-        case .forecastMessage: UpdateEvent.center.post(name: .forecastMessageDidUpdate, object: self)
+        case .forecast: UpdateEvent.center.post(name: .forecastMessageDidUpdate, object: self)
         case .forecastGIF: UpdateEvent.center.post(name: .forecastGIFDidUpdate, object: self)
         }
     }
