@@ -1,5 +1,5 @@
 //
-//  GIFImage.swift
+//  AnimatedImage.swift
 //  Dust
 //
 //  Created by Chaewan Park on 2020/04/03.
@@ -8,14 +8,10 @@
 
 import UIKit
 
-class GIFImage: UIImage {
+class AnimatedImage: UIImage {
     
-    func create(with data: Data) -> UIImage? {
+    static func create(with data: Data) -> UIImage? {
         guard let source = CGImageSourceCreateWithData(data as CFData, nil) else { return nil }
-        return animatedImage(with: source)
-    }
-    
-    func animatedImage(with source: CGImageSource) -> UIImage? {
         let count = CGImageSourceGetCount(source)
         var images = [UIImage]()
         for i in 0..<count {

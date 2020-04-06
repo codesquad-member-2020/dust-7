@@ -68,7 +68,7 @@ class Networking {
         }.resume()
     }
     
-    static func requestForecastGIF(_ url: String, completion: @escaping (Result<Data, Error>) -> Void) {
+    static func requestImage(with url: String, completion: @escaping (Result<Data, Error>) -> Void) {
         guard let url = URL(string: url) else { return }
         
         URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in

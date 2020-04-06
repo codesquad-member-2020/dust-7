@@ -11,12 +11,13 @@ import UIKit
 class ForecastViewController: UIViewController {
     
     @IBOutlet weak var forecastMessageLabel: UILabel!
-    @IBOutlet weak var gradeForecastLabel: UILabel!
+    @IBOutlet weak var localForecastLabel: UILabel!
     @IBOutlet weak var forecastImageView: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private let observers = Observers()
-    private let viewModel = ForecastMessageViewModel(with: nil)
+    private let messageViewModel = ForecastMessageViewModel(with: nil)
+    private let imageViewModel = ForecastImageViewModel(with: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +27,15 @@ class ForecastViewController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         activityIndicator.startAnimating()
         
-        viewModel.updateNotify { [weak self] message in
+        messageViewModel.updateNotify { [weak self] message in
            guard let message = message else { return }
-           self?.gradeForecastLabel.text = message.local
+           self?.localForecastLabel.text = message.local
            self?.forecastMessageLabel.text = message.overall
+        }
+        
+        imageViewModel.updateNotify { [weak self] data in
+            guard let data = data else { return }
+            self?.forecastImageView.image = AnimatedImage.create(with: data)
         }
         
         requestForecast()
@@ -43,14 +49,15 @@ class ForecastViewController: UIViewController {
         observers.addObserver(forName: .forecastMessageDidUpdate) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
             if case let .forecast(forecast) = event {
-                self?.viewModel.update(message: (forecast.message, forecast.gradeForEachRegion))
+                self?.messageViewModel.update(message: (forecast.message, forecast.gradeForEachRegion))
+                self?.requestImage(with: forecast.gifImage)
             }
         }
         
-        observers.addObserver(forName: .forecastGIFDidUpdate) { [weak self] in
+        observers.addObserver(forName: .forecastImageDidUpdate) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
-            if case .forecastGIF = event {
-                //self?.updateForecastGIF()
+            if case let .forecastImage(data) = event {
+                self?.imageViewModel.update(animatedImage: data)
                 self?.activityIndicator.stopAnimating()
             }
         }
@@ -68,4 +75,14 @@ extension ForecastViewController {
             }
         }
     }
+    
+    func requestImage(with url: String) {
+        Networking.requestImage(with: url) { result in
+            switch result {
+            case .failure: UpdateEvent.requestFailed.post()
+            case let .success(response): UpdateEvent.forecastImage(response).post()
+            }
+        }
+    }
 }
+

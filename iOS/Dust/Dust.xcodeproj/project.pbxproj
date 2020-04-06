@@ -14,6 +14,7 @@
 		C226A10F2435C4F20098CEFC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226A10E2435C4F20098CEFC /* UIColorExtension.swift */; };
 		C226A1112435DF1A0098CEFC /* DustStatusTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226A1102435DF1A0098CEFC /* DustStatusTableViewDelegate.swift */; };
 		C240DB20243A42FE00A511F0 /* ForecastMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C240DB1F243A42FE00A511F0 /* ForecastMessageViewModel.swift */; };
+		C240DB22243A434100A511F0 /* ForecastImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C240DB21243A434100A511F0 /* ForecastImageViewModel.swift */; };
 		C2725AE02430E090000E4A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725ADF2430E090000E4A38 /* AppDelegate.swift */; };
 		C2725AE22430E090000E4A38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725AE12430E090000E4A38 /* SceneDelegate.swift */; };
 		C2725AE42430E090000E4A38 /* DustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2725AE32430E090000E4A38 /* DustViewController.swift */; };
@@ -35,7 +36,7 @@
 		C2A4C12124360819005B41FE /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12024360819005B41FE /* UIImageExtension.swift */; };
 		C2A4C12524361B9D005B41FE /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */; };
 		C2A4C12724368932005B41FE /* ForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12624368932005B41FE /* ForecastResponse.swift */; };
-		C2A4C12D2436A3C1005B41FE /* GIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12C2436A3C1005B41FE /* GIFImage.swift */; };
+		C2A4C12D2436A3C1005B41FE /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A4C12C2436A3C1005B41FE /* AnimatedImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C226A10E2435C4F20098CEFC /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C226A1102435DF1A0098CEFC /* DustStatusTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DustStatusTableViewDelegate.swift; sourceTree = "<group>"; };
 		C240DB1F243A42FE00A511F0 /* ForecastMessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastMessageViewModel.swift; sourceTree = "<group>"; };
+		C240DB21243A434100A511F0 /* ForecastImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastImageViewModel.swift; sourceTree = "<group>"; };
 		C2725ADC2430E090000E4A38 /* Dust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2725ADF2430E090000E4A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2725AE12430E090000E4A38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		C2A4C12024360819005B41FE /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		C2A4C12624368932005B41FE /* ForecastResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastResponse.swift; sourceTree = "<group>"; };
-		C2A4C12C2436A3C1005B41FE /* GIFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImage.swift; sourceTree = "<group>"; };
+		C2A4C12C2436A3C1005B41FE /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				C240DB1F243A42FE00A511F0 /* ForecastMessageViewModel.swift */,
 				C2725B05243228F0000E4A38 /* DustViewModel.swift */,
+				C240DB21243A434100A511F0 /* ForecastImageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				C226A10E2435C4F20098CEFC /* UIColorExtension.swift */,
 				C2A4C12024360819005B41FE /* UIImageExtension.swift */,
 				C2A4C12424361B9D005B41FE /* DateFormatterExtension.swift */,
+				C2A4C12C2436A3C1005B41FE /* AnimatedImage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -224,7 +228,6 @@
 				C2725B1724323D31000E4A38 /* Obervers.swift */,
 				C226A1042434CB210098CEFC /* UserFacingMessage.swift */,
 				C2A4C12624368932005B41FE /* ForecastResponse.swift */,
-				C2A4C12C2436A3C1005B41FE /* GIFImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -339,7 +342,7 @@
 				C226A10A2434FA790098CEFC /* UITableViewExtension.swift in Sources */,
 				C2A15E4624345029008D5886 /* DustStatusResponse.swift in Sources */,
 				C226A10F2435C4F20098CEFC /* UIColorExtension.swift in Sources */,
-				C2A4C12D2436A3C1005B41FE /* GIFImage.swift in Sources */,
+				C2A4C12D2436A3C1005B41FE /* AnimatedImage.swift in Sources */,
 				C240DB20243A42FE00A511F0 /* ForecastMessageViewModel.swift in Sources */,
 				C2725B022430E269000E4A38 /* ForecastViewController.swift in Sources */,
 				C226A1082434FA2D0098CEFC /* DustStatusCell.swift in Sources */,
@@ -352,6 +355,7 @@
 				C226A1052434CB210098CEFC /* UserFacingMessage.swift in Sources */,
 				C2725B092432293F000E4A38 /* LocationManagerDelegate.swift in Sources */,
 				C226A1112435DF1A0098CEFC /* DustStatusTableViewDelegate.swift in Sources */,
+				C240DB22243A434100A511F0 /* ForecastImageViewModel.swift in Sources */,
 				C226A10D2435BF3C0098CEFC /* DustStatusTableViewDataSource.swift in Sources */,
 				C2725B0F24323383000E4A38 /* Endpoints.swift in Sources */,
 				C2725B0C24322EFF000E4A38 /* UpdateEvent.swift in Sources */,

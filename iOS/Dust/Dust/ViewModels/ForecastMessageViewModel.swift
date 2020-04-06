@@ -9,7 +9,8 @@
 import Foundation
 
 protocol ViewModelBinding {
-    associatedtype Data
+    associatedtype Key
+    func updateNotify(handler: @escaping (Key) -> Void)
 }
 
 class ForecastMessageViewModel: ViewModelBinding {
