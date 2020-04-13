@@ -18,4 +18,4 @@ extension ReusableView {
     }
 }
 
-extension UITableViewCell: ReusableView { }
+extension DustStatusCell: ReusableView { }

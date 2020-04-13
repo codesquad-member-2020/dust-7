@@ -51,9 +51,9 @@ class DustStatusView: UIView {
 }
 
 extension DustStatusView {
-    static let imageForGrade: Dictionary<Int, UIImage> = [0: .placeholder,
-                                                          1: .good,
-                                                          2: .moderate,
-                                                          3: .unhealthy,
-                                                          4: .hazardous]
+    static let imageForGrade: Dictionary<Int, UIImage> = [0: UIImage.Grade.placeholder,
+                                                          1: UIImage.Grade.one,
+                                                          2: UIImage.Grade.two,
+                                                          3: UIImage.Grade.three,
+                                                          4: UIImage.Grade.four]
 }

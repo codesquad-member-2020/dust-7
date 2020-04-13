@@ -10,8 +10,8 @@ import UIKit
 
 class DustViewController: UIViewController {
     
-    @IBOutlet weak var dustStatusTableView: UITableView!
-    @IBOutlet weak var dustStatusView: DustStatusView!
+    @IBOutlet weak var statusTableView: UITableView!
+    @IBOutlet weak var statusView: DustStatusView!
     
     private let observers = Observers()
     private let dustViewModel = DustViewModel()
@@ -35,10 +35,10 @@ class DustViewController: UIViewController {
         addViewUpdatingObservers()
         setupViewModels()
         
-        dustStatusTableView.delegate = dustStatusTableViewDelegate
-        dustStatusTableView.dataSource = dustStatusTableViewDataSource
-        dustStatusTableView.rowHeight = 25
-        dustStatusTableView.allowsSelection = false
+        statusTableView.delegate = dustStatusTableViewDelegate
+        statusTableView.dataSource = dustStatusTableViewDataSource
+        statusTableView.rowHeight = 25
+        statusTableView.allowsSelection = false
     }
     
     deinit {
@@ -49,22 +49,22 @@ class DustViewController: UIViewController {
         locationManagerDelegate = LocationManagerDelegate(with: dustViewModel)
         dustStatusTableViewDelegate = DustStatusTableViewDelegate(with: dustViewModel)
         dustStatusTableViewDataSource = DustStatusTableViewDataSource(with: dustViewModel)
-        dustStatusView.viewModel = dustViewModel
+        statusView.viewModel = dustViewModel
     }
     
     private func addViewUpdatingObservers() {
         observers.addObserver(forName: .stationDidUpdate) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
             if case .station = event {
-                self?.dustStatusView.updateStationLabel()
+                self?.statusView.updateStationLabel()
             }
         }
         
         observers.addObserver(forName: .dustStatusDidUpdate) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
             if case .dustStatus = event {
-                self?.dustStatusView.updateView()
-                self?.dustStatusTableView.reloadData()
+                self?.statusView.updateView()
+                self?.statusTableView.reloadData()
             }
         }
         
@@ -76,7 +76,7 @@ class DustViewController: UIViewController {
         observers.addObserver(forName: .displayedRowDidChanged) { [weak self] in
             guard let event = $0 as? UpdateEvent else { return }
             if case .displayedRow = event {
-                self?.dustStatusView.updateView()
+                self?.statusView.updateView()
             }
         }
     }

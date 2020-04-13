@@ -9,9 +9,11 @@
 import UIKit
 
 extension UIImage {
-    static let placeholder = UIImage(named: "placeholder")!
-    static let good = UIImage(named: "good")!
-    static let moderate = UIImage(named: "moderate")!
-    static let unhealthy = UIImage(named: "unhealthy")!
-    static let hazardous = UIImage(named: "hazardous")!
+    class Grade {
+        static let placeholder = UIImage(named: "placeholder")!
+        static let one = UIImage(named: "good")!
+        static let two = UIImage(named: "moderate")!
+        static let three = UIImage(named: "unhealthy")!
+        static let four = UIImage(named: "hazardous")!
+    }
 }
